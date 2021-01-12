@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>上机练习 | Lucifer</title><meta name="keywords" content="JAVA"><meta name="author" content="Lucifer LGX"><meta name="copyright" content="Lucifer LGX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="JAVA 笔记 上机练习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="上机练习">
+<meta property="og:url" content="http://liuguoxing.top/2020/12/08/java/08%E7%BB%83%E4%B9%A0/index.html">
+<meta property="og:site_name" content="Lucifer">
+<meta property="og:description" content="JAVA 笔记 上机练习">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://liuguoxing.top/img/cover.jpg">
+<meta property="article:published_time" content="2020-12-07T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-12T10:26:03.072Z">
+<meta property="article:author" content="Lucifer LGX">
+<meta property="article:tag" content="JAVA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://liuguoxing.top/img/cover.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://liuguoxing.top/2020/12/08/java/08%E7%BB%83%E4%B9%A0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2021-01-12 18:26:03'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guide/"><i class="fa-fw fas fa-home"></i><span> 导航</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/musics/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/pictures/"><i class="fa-fw fas fa-camera-retro"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/cates/"><i class="fa-fw fa fa-gift"></i><span> 美食</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 考研</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/maths/"><span> 高数</span></a></li><li><a class="site-page" href="/englishs/"><span> 英语</span></a></li><li><a class="site-page" href="/politics/"><span> 政治</span></a></li><li><a class="site-page" href="/computers/"><span> 专业</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-fire"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/"><span> VUE</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/api/#vuex-store"><span> VUEX</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.kancloud.cn/yunye/axios/234845"><span> AXIOS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.jquery123.com/"><span> JQuery</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_htmldom_document.asp"><span> JavaScript</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-wrench"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cli.im/"><span> QR生成器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://smallpdf.com/cn/pdf-to-word"><span> PDF转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.toyaml.com/index.html"><span> YML转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/native_ascii.aspx"><span> 编码转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tool.oschina.net/codeformat/html"><span> Code格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.bejson.com/jsoneditoronline"><span> JSON格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://zh.numberempire.com/latexequationeditor.php"><span> LaTeX编辑器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tableconvert.com/?output=text"><span> MD表格生成</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cron.qqe2.com"><span> CRON表达式</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-wrench"></i><span> 学校</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://www.zhihuishu.com/"><span> 智慧树</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://10.40.101.111/indexcs/index.jsp?loginErr=0"><span> CG平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://openjudge.cn/"><span> OJ平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://pintia.cn/problem-sets?tab=0"><span> PAT平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.mooctest.net/login2"><span> 慕测平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://i.chaoxing.com/base?t=1604882532908"><span> 泛雅超星</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tsg.bzu.edu.cn/"><span> BZU图书馆</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://pay.bzu.edu.cn/xysf/login.aspx?local=zh-cn"><span> BZU支付平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://172.16.16.4/login?errorCode=badCredentials"><span> BZU教务系统</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://mail.bzu.edu.cn/"><span> BZU邮件系统</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-link"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Lucifer</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guide/"><i class="fa-fw fas fa-home"></i><span> 导航</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/musics/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/pictures/"><i class="fa-fw fas fa-camera-retro"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/cates/"><i class="fa-fw fa fa-gift"></i><span> 美食</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 考研</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/maths/"><span> 高数</span></a></li><li><a class="site-page" href="/englishs/"><span> 英语</span></a></li><li><a class="site-page" href="/politics/"><span> 政治</span></a></li><li><a class="site-page" href="/computers/"><span> 专业</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-fire"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/"><span> VUE</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/api/#vuex-store"><span> VUEX</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.kancloud.cn/yunye/axios/234845"><span> AXIOS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.jquery123.com/"><span> JQuery</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_htmldom_document.asp"><span> JavaScript</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-wrench"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cli.im/"><span> QR生成器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://smallpdf.com/cn/pdf-to-word"><span> PDF转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.toyaml.com/index.html"><span> YML转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/native_ascii.aspx"><span> 编码转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tool.oschina.net/codeformat/html"><span> Code格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.bejson.com/jsoneditoronline"><span> JSON格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://zh.numberempire.com/latexequationeditor.php"><span> LaTeX编辑器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tableconvert.com/?output=text"><span> MD表格生成</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cron.qqe2.com"><span> CRON表达式</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-wrench"></i><span> 学校</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://www.zhihuishu.com/"><span> 智慧树</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://10.40.101.111/indexcs/index.jsp?loginErr=0"><span> CG平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://openjudge.cn/"><span> OJ平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://pintia.cn/problem-sets?tab=0"><span> PAT平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.mooctest.net/login2"><span> 慕测平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://i.chaoxing.com/base?t=1604882532908"><span> 泛雅超星</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tsg.bzu.edu.cn/"><span> BZU图书馆</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://pay.bzu.edu.cn/xysf/login.aspx?local=zh-cn"><span> BZU支付平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://172.16.16.4/login?errorCode=badCredentials"><span> BZU教务系统</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://mail.bzu.edu.cn/"><span> BZU邮件系统</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-link"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">上机练习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-07T16:00:00.000Z" title="发表于 2020-12-08 00:00:00">2020-12-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-12T10:26:03.072Z" title="更新于 2021-01-12 18:26:03">2021-01-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/JAVA/">JAVA</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><ol>
+<li><p>打印九九乘法表，先创建一个9行的二维不规则数组，然后把乘法表的每一行存入该数组的对应行中，最后用循环语句读取数组的每一行并打印。<br>提示：数组类型是String，数组的每个元素(下标从0开始)：a[i][j] = (i+1) + “ * “ + (j+1) + “=” + (i+1)*(j+1) + “\t”;<br/> </p>
+</li>
+<li><p>编写一个Java程序，<br>创建一个二维不规则数组，数组的形状及大小要与如下的三角形数列相一致.<br>首先把三角形数列的每行元素按照顺序依次存入二维不规则数组的对应行中,<br>然后再逐一的访问二维不规则数组中的每个元素并相加求和，最后输出求和结果.<br>1<br>1 2<br>1 2 3<br>. . .<br>1 2 3 … 100  </p>
+</li>
+<li><p>编写一个Java程序，除了主类TestGeometry外，该程序还有一个Shape接口、一个Rectangle类和一个Circle类。要求：  <br/><br>(1)Shape接口有两个抽象方法：<br>public abstract double computeArea()，用于计算面积；<br>public abstract double computeLength()，用于计算周长。<br>(2)Rectangle类实现Shape接口，实现Shape接口计算面积和周长的方法，并打印输出面积和周长，<br>格式为：矩形的面积 = xxx;  矩形的周长 = xxx。<br>有两个私有成员变量分别保存矩形的长和宽，一个构造方法用于初始化这两个成员变量。<br>(3)Circle类实现Shape接口，实现计算圆的面积和周长的方法，并打印输出面积和周长，<br>格式为：圆的面积 = xxx;    圆的周长 = xxx。<br>有一个私有成员变量用于保存圆的半径，一个构造方法用于初始化这个成员变量。<br>圆周率PI = 3.142定义为常量。<br>(4) TestGeometry类中定义实例方法double computeArea(Shape s)和double computeLength(Shape s)，<br>这两个方法通过接口回调分别计算实现类对象的面积和周长。<br>在TestGeometry类的main方法中从键盘输入矩形的长和宽以及圆的半径，<br>分别创建Rectangle类和Circle类的对象，<br>调用TestGeometry类的实例方法computeArea(Shape s)和 computeLength(Shape s)计算面积和周长。</p>
+</li>
+<li><p>(1)定义一个People类，有姓名(String name)和年龄(int age)两个private属性，<br>有4个set及get方法：<br>setName()方法设置姓名，setAge()方法设置年龄，<br>getName()方法获取姓名，getAge()方法获取年龄，<br>要求姓名和年龄的设置与获取必须通过set和get方法，不管是在People类内部还是外部。<br>有一个print()方法打印输出姓名和年龄，<br>格式为：“name = xxx; age = xxx;”。<br>(2)定义People的子类Student，新增private的学号属性(String id)，<br>通过构造方法设置学号属性，而必须通过getId()方法获取学号属性。<br>在类Student中重写父类的print()方法来打印输出学生的姓名、年龄、学号，<br>在该方法中不要读取姓名和年龄属性，学号属性的显示格式为：“id = xxx;”。<br>(3)在类Student的main方法中创建一个Student对象，让这个对象上转型并自己设定对象的所有属性，<br>然后调用上转型对象的print()方法打印输出对象的姓名、年龄、学号。</p>
+</li>
+<li><p>学生有学号、姓名、年龄三个属性，学号和姓名用字符串表示，年龄用整数值表示。<br>定义一个类Key作为键类，该类包含一个字符串成员变量存储学号；<br>定义一个类Student作为值类，该类包含一个int型成员变量保存年龄，一个字符串成员变量保存姓名。<br>将学号从“001”到“015”的学生以学号乱序的方式存入一个TreeMap集合中，<br>Key对象作为键，Student对象作为值，然后按照学号从大到小的顺序将集合中的元素逐一的打印输出。<br>分别用两种方式实现建的大小比较：<br>(1)实现Comparable接口；<br>(2)实现自定义比较器Comparator。<br>要求：使用泛型版的TreeMap集合。<br>注意，学号“001”小于学号“002”，需要先将学号转换成整数值，然后再比较大小。  </p>
+</li>
+<li><p>定义工人类Worker，该类有工号(String id)和姓名(String name)两个属性，<br>定义一个构造方法Worker(String id, String name)，通过这个构造方法设定两个属性的值。<br>这两个属性组成的字符串id+name唯一标识一个工人对象，<br>也就是id+name相等的Worker对象认为是相同的对象。<br>在测试类Test的main方法中创建一个HashSet集合，创建5个Worker对象添加到HashSet集合中，<br>自己设定每个对象的属性值，其中必须有两个对象是重复的，<br>要求HashSet集合能判断出相同的对象，从而在集合中避免存入重复的元素，<br>因此要重写Worker的hashCode()方法和equals()方法。<br>另外，重写Worker类的toString()方法，该方法返回两个属性组合成的字符串id + name，<br>用以打印输出对象的内容。最后遍历并打印输出HashSet集合中的每个元素。  </p>
+</li>
+</ol>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JAVA/">JAVA</a></div><div class="post_share"><div class="social-share" data-image="/img/cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/12/11/java/11%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%B8%80/"><img class="prev-cover" src="/img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">复习总结一</div></div></a></div><div class="next-post pull-right"><a href="/2020/12/07/java/07Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/"><img class="next-cover" src="/img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">第七章 Java集合框架</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/12/06/java/06异常/" title="第六章 异常"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-06</div><div class="title">第六章 异常</div></div></a></div><div><a href="/2020/12/17/java/17复习总结七/" title="复习总结七"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-17</div><div class="title">复习总结七</div></div></a></div><div><a href="/2020/12/14/java/14复习总结四/" title="复习总结四"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-14</div><div class="title">复习总结四</div></div></a></div><div><a href="/2020/12/13/java/13复习总结三/" title="复习总结三"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-13</div><div class="title">复习总结三</div></div></a></div><div><a href="/2020/12/12/java/12复习总结二/" title="复习总结二"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-12</div><div class="title">复习总结二</div></div></a></div><div><a href="/2020/12/11/java/11复习总结一/" title="复习总结一"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-11</div><div class="title">复习总结一</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Lucifer LGX</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Nightliuguoxing"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Nightliuguoxing" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2050180797lgx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This Is My Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/01/12/ci/index/" title="无题"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/01/12/ci/index/" title="无题">无题</a><time datetime="2021-01-12T10:52:03.737Z" title="发表于 2021-01-12 18:52:03">2021-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/01/politics/v2020/index/" title="政治"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="政治"/></a><div class="content"><a class="title" href="/2021/01/01/politics/v2020/index/" title="政治">政治</a><time datetime="2020-12-31T16:00:00.000Z" title="发表于 2021-01-01 00:00:00">2021-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/17/java/17%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%B8%83/" title="复习总结七"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="复习总结七"/></a><div class="content"><a class="title" href="/2020/12/17/java/17%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%B8%83/" title="复习总结七">复习总结七</a><time datetime="2020-12-16T16:00:00.000Z" title="发表于 2020-12-17 00:00:00">2020-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/15/java/15%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%BA%94/" title="复习总结五"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="复习总结五"/></a><div class="content"><a class="title" href="/2020/12/15/java/15%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%BA%94/" title="复习总结五">复习总结五</a><time datetime="2020-12-14T16:00:00.000Z" title="发表于 2020-12-15 00:00:00">2020-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/14/java/14%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E5%9B%9B/" title="复习总结四"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="复习总结四"/></a><div class="content"><a class="title" href="/2020/12/14/java/14%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E5%9B%9B/" title="复习总结四">复习总结四</a><time datetime="2020-12-13T16:00:00.000Z" title="发表于 2020-12-14 00:00:00">2020-12-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/cover.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020-2021 - 2021 By Lucifer LGX</div><div class="framework-info"></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>鲁ICP备19034408号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.spacingElementById('content-inner')
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script></div></body></html>

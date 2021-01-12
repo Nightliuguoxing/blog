@@ -1,0 +1,378 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>复习总结七 | Lucifer</title><meta name="keywords" content="JAVA"><meta name="author" content="Lucifer LGX"><meta name="copyright" content="Lucifer LGX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="JAVA 复习 七">
+<meta property="og:type" content="article">
+<meta property="og:title" content="复习总结七">
+<meta property="og:url" content="http://liuguoxing.top/2020/12/17/java/17%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%B8%83/index.html">
+<meta property="og:site_name" content="Lucifer">
+<meta property="og:description" content="JAVA 复习 七">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://liuguoxing.top/img/cover.jpg">
+<meta property="article:published_time" content="2020-12-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-01-12T11:03:31.420Z">
+<meta property="article:author" content="Lucifer LGX">
+<meta property="article:tag" content="JAVA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://liuguoxing.top/img/cover.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="http://liuguoxing.top/2020/12/17/java/17%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%B8%83/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-01-12 19:03:31'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guide/"><i class="fa-fw fas fa-home"></i><span> 导航</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/musics/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/pictures/"><i class="fa-fw fas fa-camera-retro"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/cates/"><i class="fa-fw fa fa-gift"></i><span> 美食</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 考研</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/maths/"><span> 高数</span></a></li><li><a class="site-page" href="/englishs/"><span> 英语</span></a></li><li><a class="site-page" href="/politics/"><span> 政治</span></a></li><li><a class="site-page" href="/computers/"><span> 专业</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-fire"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/"><span> VUE</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/api/#vuex-store"><span> VUEX</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.kancloud.cn/yunye/axios/234845"><span> AXIOS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.jquery123.com/"><span> JQuery</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_htmldom_document.asp"><span> JavaScript</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-wrench"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cli.im/"><span> QR生成器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://smallpdf.com/cn/pdf-to-word"><span> PDF转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.toyaml.com/index.html"><span> YML转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/native_ascii.aspx"><span> 编码转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tool.oschina.net/codeformat/html"><span> Code格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.bejson.com/jsoneditoronline"><span> JSON格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://zh.numberempire.com/latexequationeditor.php"><span> LaTeX编辑器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tableconvert.com/?output=text"><span> MD表格生成</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cron.qqe2.com"><span> CRON表达式</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-wrench"></i><span> 学校</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://www.zhihuishu.com/"><span> 智慧树</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://10.40.101.111/indexcs/index.jsp?loginErr=0"><span> CG平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://openjudge.cn/"><span> OJ平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://pintia.cn/problem-sets?tab=0"><span> PAT平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.mooctest.net/login2"><span> 慕测平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://i.chaoxing.com/base?t=1604882532908"><span> 泛雅超星</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tsg.bzu.edu.cn/"><span> BZU图书馆</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://pay.bzu.edu.cn/xysf/login.aspx?local=zh-cn"><span> BZU支付平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://172.16.16.4/login?errorCode=badCredentials"><span> BZU教务系统</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://mail.bzu.edu.cn/"><span> BZU邮件系统</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-link"></i><span> 留言板</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/cover.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Lucifer</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guide/"><i class="fa-fw fas fa-home"></i><span> 导航</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/musics/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/pictures/"><i class="fa-fw fas fa-camera-retro"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/cates/"><i class="fa-fw fa fa-gift"></i><span> 美食</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 考研</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/maths/"><span> 高数</span></a></li><li><a class="site-page" href="/englishs/"><span> 英语</span></a></li><li><a class="site-page" href="/politics/"><span> 政治</span></a></li><li><a class="site-page" href="/computers/"><span> 专业</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-fire"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/"><span> VUE</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/api/#vuex-store"><span> VUEX</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.kancloud.cn/yunye/axios/234845"><span> AXIOS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.jquery123.com/"><span> JQuery</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_htmldom_document.asp"><span> JavaScript</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-wrench"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cli.im/"><span> QR生成器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://smallpdf.com/cn/pdf-to-word"><span> PDF转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.toyaml.com/index.html"><span> YML转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/native_ascii.aspx"><span> 编码转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tool.oschina.net/codeformat/html"><span> Code格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.bejson.com/jsoneditoronline"><span> JSON格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://zh.numberempire.com/latexequationeditor.php"><span> LaTeX编辑器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tableconvert.com/?output=text"><span> MD表格生成</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cron.qqe2.com"><span> CRON表达式</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-wrench"></i><span> 学校</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://www.zhihuishu.com/"><span> 智慧树</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://10.40.101.111/indexcs/index.jsp?loginErr=0"><span> CG平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://openjudge.cn/"><span> OJ平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://pintia.cn/problem-sets?tab=0"><span> PAT平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.mooctest.net/login2"><span> 慕测平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://i.chaoxing.com/base?t=1604882532908"><span> 泛雅超星</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tsg.bzu.edu.cn/"><span> BZU图书馆</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://pay.bzu.edu.cn/xysf/login.aspx?local=zh-cn"><span> BZU支付平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://172.16.16.4/login?errorCode=badCredentials"><span> BZU教务系统</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://mail.bzu.edu.cn/"><span> BZU邮件系统</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw fa fa-link"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">复习总结七</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-16T16:00:00.000Z" title="发表于 2020-12-17 00:00:00">2020-12-17</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-01-12T11:03:31.420Z" title="更新于 2021-01-12 19:03:31">2021-01-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/JAVA/">JAVA</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><code>Java的集合类都在java.util包中,使用前需要导入：import java.util.*;</code>  </p>
+<h3 id="单列集合-Collection"><a href="#单列集合-Collection" class="headerlink" title="单列集合(Collection)"></a>单列集合(Collection)</h3><ul>
+<li>Collection是单列集合的根接口,实现了该接口的类称为单列集合<ul>
+<li>List 子接口: 实现List接口的集合称为List集合<ul>
+<li>List集合的特点是存储的元素有序且可重复</li>
+</ul>
+<ol>
+<li>ArrayList</li>
+<li>LinkedList</li>
+</ol>
+</li>
+<li>Set 子接口: 实现Set接口的集合称为Set集合<ul>
+<li>Set集合的特点是存储的元素无序且不可重复</li>
+</ul>
+<ol>
+<li>HashSet</li>
+<li>TreeSet</li>
+</ol>
+</li>
+<li>Queue 子接口</li>
+</ul>
+</li>
+<li><code>有序是指元素的存储位置有顺序,不是指元素按大小有序</code></li>
+</ul>
+<h3 id="双列集合-Map"><a href="#双列集合-Map" class="headerlink" title="双列集合(Map)"></a>双列集合(Map)</h3><ul>
+<li>Map是双列集合类的根接口,实现了该接口的类称为双列集合<ul>
+<li>HashMap</li>
+<li>TreeMap</li>
+<li>HashTable</li>
+</ul>
+</li>
+<li>双列集合用于存储具有键(Key)—值(Value)对应关系的元素,每个元素由键和值组成一个二元组&lt;Key,Value&gt;</li>
+<li><code>键用来唯一标识元素,可以通过键找到值</code></li>
+</ul>
+<h4 id="List"><a href="#List" class="headerlink" title="List"></a>List</h4><ul>
+<li>实现List接口的集合称为List集合,也可称为列表,主要有ArrayList和LinkedList。</li>
+<li>List集合允许出现重复元素,元素以线性方式存储,可以通过索引(下标)来访问。List集合的存储顺序和遍历顺序一致。</li>
+</ul>
+<p><img src="http://lgxs.liuguoxing.top/java/List.png" alt="List">  </p>
+<h4 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h4><ul>
+<li>在ArrayList集合的内部封装了一个数组,初始长度的默认值是10,也可以在创建集合对象时指定数组的初始长度。</li>
+<li>ArrayList集合的add(Object o)方法将元素添加到列表的尾部,而add(int index,Object o)方法将元素插入列表的指定位置index处</li>
+<li>删除元素时,ArrayList集合将被删除元素之后的元素都向前移一个位置以填补空位</li>
+<li>将元素插入指定位置时,会将该位置的元素以及后面的元素都向后移一个位置</li>
+<li>更新操作的效率低</li>
+<li>查询操作的效率高</li>
+<li><code>集合和数组一样,索引的取值范围是从0开始,到size-1为止(size是集合中的元素个数),不能超出此范围,否则会引发异常。</code></li>
+</ul>
+<h4 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h4><ul>
+<li>在LinkedList集合内部维护了一个双向链表,每个元素都存有分别指向前一个元素和后一个元素的引用,从而将所有的元素链接起来</li>
+<li><code>调用LinkedList的add(int index,Object o)方法添加元素,需要先找到索引index指示的位置,所以时间复杂度是O(n)。</code></li>
+<li><code>调用add(Object o)、addFirst(Object o)、addLast(Object o)等方法添加元素,因为位置是已知的,只需要添加新节点,所以时间复杂度是O(1)</code></li>
+</ul>
+<p><img src="http://lgxs.liuguoxing.top/java/LinkedList.png" alt="LinkedList"></p>
+<h3 id="Iterator"><a href="#Iterator" class="headerlink" title="Iterator"></a>Iterator</h3><ul>
+<li>Iterator接口也是Java集合框架中的一员,也称为迭代器</li>
+<li>集合的iterator()方法返回一个Iterator接口的实现类对象,用于遍历集合中的元素</li>
+<li>Iterator 方法: <ul>
+<li>boolean hasNext(): 判断是否还有下一个元素,如果是,返回 true,否则返回false。</li>
+<li>Object next(): 访问下一个元素并返回该元素的引用。调用next()方法访问下一个元素时,要保证该元素的存在,否则会抛异常</li>
+<li>void remove(): 删除刚访问过的元素</li>
+</ul>
+</li>
+<li>在使用Iterator迭代器遍历集合的过程中，如果调用集合的remove()或add()方法执行删除或添加操作，那么再继续遍历就会引发异常<ul>
+<li>删除某个元素后跳出循环不再继续迭代<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="string">&quot;Annie&quot;</span>.equals(obj)) &#123;</span><br><span class="line">    list.remove(obj);</span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure></li>
+<li>可以使用Iterator迭代器自身的删除方法，也就是将代码list.remove(obj) 替换成it.remove()<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="string">&quot;Annie&quot;</span>.equals(obj)) &#123;</span><br><span class="line">    it.remove();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="ListIterator接口"><a href="#ListIterator接口" class="headerlink" title="ListIterator接口"></a>ListIterator接口</h4></li>
+</ul>
+</li>
+<li>为了使迭代方式多样化，既可以正向迭代，也可以反向迭代，Java提供了ListIterator接口</li>
+<li>它是Iterator的子接口，新增了一些方法</li>
+<li>集合的listIterator()方法返回一个ListIterator迭代器对象</li>
+<li><code>注意，List集合实现了ListIterator接口，而Set集合没有实现ListIterator迭代器</code></li>
+</ul>
+<p><img src="http://lgxs.liuguoxing.top/java/ListIterator.png" alt="ListIterator"></p>
+<ul>
+<li>ListIterator新增的方法主要用于反向迭代，此外还提供add()方法用于在遍历的过程中添加元素</li>
+<li>由于ListIterator是Iterator的子接口，因此是双向迭代器</li>
+<li>在遍历集合的期间，通过Iterator迭代器只能删除元素，而通过ListIterator迭代器既可以添加也可以删除元素</li>
+<li>listIterator(int index)方法的index参数指定迭代的起始位置，正反向迭代都可以执行，index的范围是0到list.size()；</li>
+<li>无参数的listIterator()方法,则相当于调用listIterator(0)</li>
+</ul>
+<h4 id="foreach"><a href="#foreach" class="headerlink" title="foreach"></a>foreach</h4><p>foreach循环除了用于遍历数组外，也可以用于遍历集合，是一种更加简洁的for循环，也称增强型for循环  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(集合中的元素类型 临时变量 : 容器) &#123;</span><br><span class="line">    执行语句</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>与for循环相比，foreach循环不需要获得容器的长度，也不需要通过索引访问容器中的元素，而是自动的遍历容器中的每个元素  </p>
+<div class="note danger simple"></div>
+
+<p>foreach循环只能用于遍历访问，不能用于修改集合或数组中的元素。<br>因为临时变量保存的是所访问元素的引用，修改临时变量，只是修改了临时变量的引用，而不是修改所引用元素的值  </p>
+<h4 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h4><ul>
+<li>与List集合不同，Set集合中的元素无序、不允许重复</li>
+<li>主要实现类有HashSet和TreeSet</li>
+<li>HashSet内部维持一个哈希表结构，根据对象的哈希值来确定元素的存储位置</li>
+<li>TreeSet内部则维持一个二叉排序树，对存入集合中的每个元素进行排序</li>
+</ul>
+<h4 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h4><ul>
+<li>当使用HashSet的add()方法添加一个元素时，首先调用该元素的hashCode()方法获得对象的哈希值，然后根据哈希值确定一个存储位置</li>
+<li>如果这个位置上没有元素，直接将该元素存入此位置</li>
+<li>如果这个位置上已存入元素，则调用该元素的equals()方法依次和已存入元素进行比较<ul>
+<li>比较结果均为false说明不存在重复元素，则将该元素存入这个位置</li>
+<li>若和某个已存入元素的比较结果为true，说明该元素和这个已存入元素的值相等，则抛弃该元素</li>
+</ul>
+</li>
+<li><code>由于哈希表冲突现象的存在，哈希值相同的对象未必就是值相同的对象</code></li>
+</ul>
+<div class="note danger simple"></div>
+
+<p>当向HasheSet集合中存入元素时，为了保证HasheSet正常工作，存入的对象应当重写Object根类的hashCode()和equals()方法  </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> id.hashCode();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span></span>&#123;</span><br><span class="line">    <span class="comment">// if(this == o) &#123; return true; &#125;</span></span><br><span class="line">    <span class="comment">// if(getClass() != o.getClass()) &#123; return false; &#125;</span></span><br><span class="line">    <span class="keyword">if</span>(o == <span class="keyword">null</span>) &#123; <span class="keyword">return</span> <span class="keyword">false</span>; &#125;</span><br><span class="line">    <span class="keyword">if</span>(!(o <span class="keyword">instanceof</span> S)) &#123; <span class="keyword">return</span> <span class="keyword">false</span>; &#125; </span><br><span class="line">    S s = (S) o;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.id.equals(s.id); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h4><ul>
+<li>TreeSet集合采用二叉排序树来存储元素，会对存入的元素进行排序</li>
+<li>因为要排序，所以要比较元素的大小，这就需要元素实现Comparable接口，或者给集合传入一个自定义的Comparator比较器</li>
+<li>TreeSet集合同样不允许存入重复元素，若插入重复的新元素则会抛弃</li>
+<li>和HashSet集合不同，TreeSet集合是通过比较大小来判断是否是重复元素，大小相同元素的就认为是重复元素</li>
+<li>通过Iterator迭代器遍历TreeSet集合时，输出的字符串按字典序形成有序序列</li>
+<li>因为TreeSet集合在内部对元素进行排序，而String类实现的Comparable接口是按字典序比较大小的</li>
+<li><code>TreeSet集合用Iterator迭代器遍历形成的元素序列都是有序序列</code></li>
+<li>往TreeSet集合中添加的元素需要实现Comparable接口，否则无法比较大小，没法进行排序</li>
+<li>可以自己为TreeSet集合定义一个比较器，即定义一个Comparator接口的实现类，把该实现类的对象输入TreeSet集合作为比较器</li>
+</ul>
+<h4 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h4><p>实现了Map接口的集合称为Map集合，也叫双列集合，常用的有HashMap和TreeMap(提示：HashSet由HashMap实现，TreeSet由TreeMap实现)<br><code>双列集合存储的每个元素都包含一个键Key和一个值Value，从键到值构成一个映射。键具有唯一性，可以唯一确定一个元素</code>  </p>
+<ul>
+<li>访问Map集合中的元素时，只要指定了Key，就能找到对应的值</li>
+<li>Map集合添加元素使用put(Object k, Object v)方法，查找元素使用get(Object k)方法</li>
+</ul>
+<h4 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h4><p>HashMap内部维持一个Hash表，用于存储具有键—值映射关系的数据  </p>
+<ul>
+<li>HashMap集合不允许出现重复的键，如果出现重复的键，则认为是重复的元素，那么新元素会覆盖键相同的旧元素</li>
+<li>通过重写键的hashCode()方法来计算键的hash码，通过重写键的equals()方法来判断键是否相同，如果不重写，就会调用从Object类继承的这两个方法</li>
+<li>往HashMap集合添加元素的过程与HashSet集合类似<ul>
+<li>首先调用键的hashCode()方法计算键的hash码，根据hash码计算出存储位置</li>
+<li>如果在该位置上没有元素就直接存入</li>
+<li>如果该位置上已有元素，则调用键的equals()方法依次和这些已有元素的键进行比较</li>
+<li>如果比较结果均为false，就将该元素存入当前位置，否则说明有重复元素，则用新元素覆盖键相同的旧元素</li>
+</ul>
+</li>
+</ul>
+<h4 id="三种遍历"><a href="#三种遍历" class="headerlink" title="三种遍历"></a>三种遍历</h4><ol>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Map map = <span class="keyword">new</span> HashMap();</span><br><span class="line"><span class="comment">// map.put(); ...</span></span><br><span class="line">Set set = map.KeySet();</span><br><span class="line">Iterator it = set.iterator();</span><br><span class="line"><span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">    Object k = it.next();</span><br><span class="line">    Object v = map.get(k);</span><br><span class="line">    System.out.println(k + <span class="string">&quot; : &quot;</span>+ v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Map map = <span class="keyword">new</span> HasMap();</span><br><span class="line"><span class="comment">// map.put(); ...</span></span><br><span class="line">Set set = map.entrySet();</span><br><span class="line">Iterator it = set.iterator();</span><br><span class="line"><span class="keyword">while</span> (it.hasNext())&#123;</span><br><span class="line">    Map.Entry entry = (Map.Entry) it.next();</span><br><span class="line">    Object k = entry.getKey();</span><br><span class="line">    Object v = entry.getValue();</span><br><span class="line">    System.out.println(k + <span class="string">&quot; : &quot;</span> + v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Map map = <span class="keyword">new</span> HasMap();</span><br><span class="line"><span class="comment">// map.put(); ...</span></span><br><span class="line">Collection vs = map.values();</span><br><span class="line">Iterator it = vs.iterator();</span><br><span class="line"><span class="keyword">while</span> (it.hasNext())&#123;</span><br><span class="line">    Object v = it.next();</span><br><span class="line">    System.out.println(v);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h4></li>
+</ol>
+<ul>
+<li>用来存储由键-值对构成的元素，不允许出现重复的键</li>
+<li>TreeMap集合使用二叉排序树来存储元素，元素是按键的大小顺序排列的</li>
+<li>元素的键要实现Comparable接口或者实现键的自定义比较器Comparator，以便能对键比较大小</li>
+<li>键大小相同的元素即认为是重复元素，对于重复元素，也是<code>新元素覆盖旧元素</code></li>
+<li>TreeMap集合的遍历方式与HashMap集合相同，也是那三种方式</li>
+</ul>
+<h3 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h3><ul>
+<li>java.util包提供了工具类Collections用来操作集合</li>
+<li>Collections类封装了大量静态方法对集合中的元素进行排序、查找和修改等操作</li>
+</ul>
+<h4 id="排序操作"><a href="#排序操作" class="headerlink" title="排序操作"></a>排序操作</h4><ul>
+<li>static void reverse(List list)：反转List集合中的元素顺序</li>
+<li>static void sort(List list)：根据自然序对集合中的元素进行排序</li>
+<li>static void shuffle(List list)：对List集合中的元素进行随机排序(洗牌)</li>
+</ul>
+<h4 id="查找替换"><a href="#查找替换" class="headerlink" title="查找替换"></a>查找替换</h4><ul>
+<li>static int binarySearch(List list, Object key)：使用二分查找法搜索集合中是否存在指定值为key的元素，返回该值的索引</li>
+<li>static Object max(Collection col)：返回集合中最大的元素</li>
+<li>static Object min(Collection col)：返回集合中最小的元素</li>
+<li>static boolean replaceAll(List list, Object oldVal, Object newVal)：用新值newVal取代集合中的所有旧值oldVal</li>
+<li>static void swap(List list, int i, int j)：交换集合中位置i和位置j处的元素</li>
+</ul>
+<h3 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h3><p>java.util包还提供了用于操作数组的工具类Arrays，封装大量的静态方法用于操作数组</p>
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><ul>
+<li>可以使用Arrays的sort()方法实现数组的排序。</li>
+<li>如果数组的元素是字符型、整型或浮点型等数值类型，则按值的大小进行排序。</li>
+<li>如果数组的元素是对象，则所有元素都必须实现 Comparable 接口(按该接口的compareTo方法比较大小)，否则无法排序。</li>
+</ul>
+<h4 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h4><ul>
+<li>binarySearch()方法使用二分查找法搜索指定值的位置，需要先对数组排序。</li>
+<li>如果数组的元素是对象，还需要自己实现比较器：int binarySearch(Object[] a, Object key, Comparator c)，这里参数c是一个自定义的Comparator比较器。</li>
+</ul>
+<h4 id="把数组转换为字符串"><a href="#把数组转换为字符串" class="headerlink" title="把数组转换为字符串"></a>把数组转换为字符串</h4><ul>
+<li>使用Arrays的toString()方法将数组存储的数据转换成字符串形式：[“元素1”, “元素2”, ….]，这样就可以直接打印输出数组了。</li>
+<li>如果数组的元素是八种基本类型，没有任何问题；如果数组的元素是对象，则要调用对象的toString()方法实现转换，所以元素必须正确的重写Object类的toString()方法</li>
+</ul>
+<h4 id="拷贝元素"><a href="#拷贝元素" class="headerlink" title="拷贝元素"></a>拷贝元素</h4><p>Arrays工具类的copyOfRange(Object[] original, int from, int to)方法将数组中指定范围的元素复制到一个新的数组中，该方法中参数original表示被复制的数组，from表示被复制元素的初始索引(包括)，to表示被复制元素的最后索引(不包括)  </p>
+<h4 id="填充元素"><a href="#填充元素" class="headerlink" title="填充元素"></a>填充元素</h4><p>可以使用Array的fill(Object[] a, Object val)方法将指定的值赋给数组中的每一个元素</p>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JAVA/">JAVA</a></div><div class="post_share"><div class="social-share" data-image="/img/cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/01/01/politics/v2020/index/"><img class="prev-cover" src="/img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">政治</div></div></a></div><div class="next-post pull-right"><a href="/2020/12/15/java/15%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%BA%94/"><img class="next-cover" src="/img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">复习总结五</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/12/06/java/06异常/" title="第六章 异常"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-06</div><div class="title">第六章 异常</div></div></a></div><div><a href="/2020/12/15/java/15复习总结五/" title="复习总结五"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-15</div><div class="title">复习总结五</div></div></a></div><div><a href="/2020/12/13/java/13复习总结三/" title="复习总结三"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-13</div><div class="title">复习总结三</div></div></a></div><div><a href="/2020/12/12/java/12复习总结二/" title="复习总结二"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-12</div><div class="title">复习总结二</div></div></a></div><div><a href="/2020/12/11/java/11复习总结一/" title="复习总结一"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-11</div><div class="title">复习总结一</div></div></a></div><div><a href="/2020/12/08/java/08练习/" title="上机练习"><img class="cover" src="/img/cover.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-08</div><div class="title">上机练习</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Lucifer LGX</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Nightliuguoxing"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Nightliuguoxing" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2050180797lgx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This Is My Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88-Collection"><span class="toc-number">1.1.</span> <span class="toc-text">单列集合(Collection)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88-Map"><span class="toc-number">1.2.</span> <span class="toc-text">双列集合(Map)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#List"><span class="toc-number">1.2.1.</span> <span class="toc-text">List</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#ArrayList"><span class="toc-number">1.2.2.</span> <span class="toc-text">ArrayList</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LinkedList"><span class="toc-number">1.2.3.</span> <span class="toc-text">LinkedList</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Iterator"><span class="toc-number">1.3.</span> <span class="toc-text">Iterator</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ListIterator%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.3.1.</span> <span class="toc-text">ListIterator接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#foreach"><span class="toc-number">1.3.2.</span> <span class="toc-text">foreach</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Set"><span class="toc-number">1.3.3.</span> <span class="toc-text">Set</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HashSet"><span class="toc-number">1.3.4.</span> <span class="toc-text">HashSet</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TreeSet"><span class="toc-number">1.3.5.</span> <span class="toc-text">TreeSet</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Map"><span class="toc-number">1.3.6.</span> <span class="toc-text">Map</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#HashMap"><span class="toc-number">1.3.7.</span> <span class="toc-text">HashMap</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86"><span class="toc-number">1.3.8.</span> <span class="toc-text">三种遍历</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#TreeMap"><span class="toc-number">1.3.9.</span> <span class="toc-text">TreeMap</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-number">1.4.</span> <span class="toc-text">工具类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F%E6%93%8D%E4%BD%9C"><span class="toc-number">1.4.1.</span> <span class="toc-text">排序操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E6%9B%BF%E6%8D%A2"><span class="toc-number">1.4.2.</span> <span class="toc-text">查找替换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Arrays"><span class="toc-number">1.5.</span> <span class="toc-text">Arrays</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%92%E5%BA%8F"><span class="toc-number">1.5.1.</span> <span class="toc-text">排序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE"><span class="toc-number">1.5.2.</span> <span class="toc-text">查找</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8A%8A%E6%95%B0%E7%BB%84%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">1.5.3.</span> <span class="toc-text">把数组转换为字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%B7%E8%B4%9D%E5%85%83%E7%B4%A0"><span class="toc-number">1.5.4.</span> <span class="toc-text">拷贝元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A1%AB%E5%85%85%E5%85%83%E7%B4%A0"><span class="toc-number">1.5.5.</span> <span class="toc-text">填充元素</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/01/12/ci/index/" title="无题"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/01/12/ci/index/" title="无题">无题</a><time datetime="2021-01-12T10:52:03.737Z" title="发表于 2021-01-12 18:52:03">2021-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/01/01/politics/v2020/index/" title="政治"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="政治"/></a><div class="content"><a class="title" href="/2021/01/01/politics/v2020/index/" title="政治">政治</a><time datetime="2020-12-31T16:00:00.000Z" title="发表于 2021-01-01 00:00:00">2021-01-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/17/java/17%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%B8%83/" title="复习总结七"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="复习总结七"/></a><div class="content"><a class="title" href="/2020/12/17/java/17%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%B8%83/" title="复习总结七">复习总结七</a><time datetime="2020-12-16T16:00:00.000Z" title="发表于 2020-12-17 00:00:00">2020-12-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/15/java/15%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%BA%94/" title="复习总结五"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="复习总结五"/></a><div class="content"><a class="title" href="/2020/12/15/java/15%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E4%BA%94/" title="复习总结五">复习总结五</a><time datetime="2020-12-14T16:00:00.000Z" title="发表于 2020-12-15 00:00:00">2020-12-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/14/java/14%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E5%9B%9B/" title="复习总结四"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="复习总结四"/></a><div class="content"><a class="title" href="/2020/12/14/java/14%E5%A4%8D%E4%B9%A0%E6%80%BB%E7%BB%93%E5%9B%9B/" title="复习总结四">复习总结四</a><time datetime="2020-12-13T16:00:00.000Z" title="发表于 2020-12-14 00:00:00">2020-12-14</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/cover.jpg)"><div id="footer-wrap"><div class="copyright">&copy;2020-2021 - 2021 By Lucifer LGX</div><div class="framework-info"></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>鲁ICP备19034408号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.spacingElementById('content-inner')
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script></div></body></html>
