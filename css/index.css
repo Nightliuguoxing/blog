@@ -1332,17 +1332,17 @@ canvas:not(#ribbon-canvas),
 :root {
   --global-font-size: 14px;
   --global-bg: #fff;
-  --font-color: #4c4948;
+  --font-color: #000;
   --hr-border: #a4d8fa;
   --hr-before-color: #80c8f8;
   --search-bg: #f6f8fa;
-  --search-input-color: #4c4948;
-  --search-result-title: #4c4948;
+  --search-input-color: #000;
+  --search-result-title: #000;
   --preloader-bg: #37474f;
   --preloader-color: #fff;
   --tab-border-color: #f0f0f0;
   --tab-botton-bg: #f0f0f0;
-  --tab-botton-color: #1f2d3d;
+  --tab-botton-color: #000;
   --tab-button-hover-bg: #dcdcdc;
   --tab-button-active-bg: #fff;
   --card-bg: #fff;
@@ -1353,7 +1353,7 @@ canvas:not(#ribbon-canvas),
   --text-bg-hover: #49b1f5;
   --light-grey: #eee;
   --white: #fff;
-  --text-highlight-color: #1f2d3d;
+  --text-highlight-color: #000;
   --blockquote-color: #6a737d;
   --blockquote-bg: rgba(73,177,245,0.1);
   --reward-pop: #f5f5f5;
@@ -5413,7 +5413,7 @@ mjx-container[jax='CHTML'][display='true'] {
   padding-bottom: 0.3rem;
 }
 .aplayer {
-  color: #4c4948;
+  color: #000;
 }
 #article-container .aplayer {
   margin: 0 0 1rem;
@@ -6929,13 +6929,13 @@ div.videos[col='4'] iframe {
 .note.modern {
   border: 1px solid transparent !important;
   background-color: #f5f5f5;
-  color: #4c4948;
+  color: #000;
 }
 .note.flat {
   border: initial;
   border-left: 5px solid #eee;
   background-color: #f9f9f9;
-  color: #4c4948;
+  color: #000;
 }
 .note h2,
 .note h3,
