@@ -3149,25 +3149,31 @@ li.categoryBar-list-item:nth-child(6) {
 li.categoryBar-list-item:nth-child(7) {
   background: url('https://cdn.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@v3.3.3_2/img/cover1.webp');
 }
+li.categoryBar-list-item:nth-child(8) {
+  background: url('https://cdn.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@v3.3.3_2/img/cover2.webp');
+}
 li.categoryBar-list-item:nth-child(1)>span::after {
   content: 'JAVA' !important;
 }
 li.categoryBar-list-item:nth-child(2)>span::after {
-  content: '技术杂谈' !important;
+  content: 'JAVA WEB' !important;
 }
 li.categoryBar-list-item:nth-child(3)>span::after {
-  content: '政治' !important;
+  content: '技术杂谈' !important;
 }
 li.categoryBar-list-item:nth-child(4)>span::after {
-  content: '数据库' !important;
+  content: '政治' !important;
 }
 li.categoryBar-list-item:nth-child(5)>span::after {
-  content: '数据结构' !important;
+  content: '数据库' !important;
 }
 li.categoryBar-list-item:nth-child(6)>span::after {
-  content: '英语' !important;
+  content: '数据结构' !important;
 }
 li.categoryBar-list-item:nth-child(7)>span::after {
+  content: '英语' !important;
+}
+li.categoryBar-list-item:nth-child(8)>span::after {
   content: '计算机网络' !important;
 }
 li.categoryBar-list-item {
