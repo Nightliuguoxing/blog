@@ -53,7 +53,6 @@
 }
 
 .contrib-column {
-     
     text-align: center;
     border-left: 1px solid #ddd;
     border-top: 1px solid #ddd;
@@ -65,7 +64,7 @@
 }
 
 .table-column {
-	padding:10px;
+	padding: 3px;
     display: table-cell;
     width:33%;
     vertical-align: top;
