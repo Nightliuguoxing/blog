@@ -108,3 +108,11 @@
 #aside-content .card-archives ul.card-archive-list > .card-archive-list-item a span, #aside-content .card-categories ul.card-category-list > .card-category-list-item a span{
     color: #000;
 }
+
+.float-left.text-gray{
+    color: #000;
+}
+
+body{
+    color: #000!important;
+} 
