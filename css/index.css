@@ -3176,13 +3176,13 @@ li.categoryBar-list-item:nth-child(4) {
   background: url('https://cdn.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@v3.3.3_2/img/cover4.webp');
 }
 li.categoryBar-list-item:nth-child(1)>span::after {
-  content: '数二' !important;
+  content: '政治' !important;
 }
 li.categoryBar-list-item:nth-child(2)>span::after {
-  content: '英二' !important;
+  content: '数二' !important;
 }
 li.categoryBar-list-item:nth-child(3)>span::after {
-  content: '政治' !important;
+  content: '英二' !important;
 }
 li.categoryBar-list-item:nth-child(4)>span::after {
   content: '专业' !important;
@@ -6908,6 +6908,7 @@ kbd {
   font-weight: bold;
 }
 #article-container a.link-card p.url {
+  display: none;
   -webkit-flex-shrink: 0;
   flex-shrink: 0;
   color: rgba(68,68,68,0.65);
