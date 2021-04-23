@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>操作系统 第一章题库 | Lucifer</title><meta name="keywords" content="操作系统"><meta name="author" content="Lucifer LGX"><meta name="copyright" content="Lucifer LGX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="操作系统目录">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第一章 操作系统引论 | Lucifer</title><meta name="keywords" content="操作系统"><meta name="author" content="Lucifer LGX"><meta name="copyright" content="Lucifer LGX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="第一章 操作系统引论">
 <meta property="og:type" content="website">
-<meta property="og:title" content="操作系统 第一章题库">
+<meta property="og:title" content="第一章 操作系统引论">
 <meta property="og:url" content="http://liuguoxing.top/class/s2/os/OS01.html">
 <meta property="og:site_name" content="Lucifer">
-<meta property="og:description" content="操作系统目录">
+<meta property="og:description" content="第一章 操作系统引论">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://liuguoxing.top/img/cover.jpg">
-<meta property="article:published_time" content="2021-02-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-03-16T13:17:47.456Z">
+<meta property="article:published_time" content="2021-04-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-04-23T12:04:07.220Z">
 <meta property="article:author" content="Lucifer LGX">
 <meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
@@ -64,7 +64,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-03-16 21:17:47'
+  postUpdate: '2021-04-23 20:04:07'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -146,163 +146,519 @@
           document.documentElement.classList.remove('hide-aside')
         }
       }
-    })(window)</script><link rel="stylesheet" href="/css/cursor.css"><link rel="stylesheet" href="/css/flipcountdown.css"><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/background.css"/><link rel="stylesheet" href="/swiper/swiper.min.css"><link rel="stylesheet" href="/swiper/swiperstyle.css"><link rel="stylesheet" href="/css/bilibiliBanner.css"  media="defer" onload="this.media='screen'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/hideCategory.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/font-awesome-animation.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href=""><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guide/"><i class="fa-fw iconfont icon-daohang1"></i><span> 导航</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-shijian"></i><span> 时轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-icon"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/skills/"><i class="fa-fw iconfont icon-ai-book"></i><span> 技术</span></a></div><div class="menus_item"><a class="site-page" href="/dk/"><span> 打卡</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-06"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/musics/"><i class="fa-fw iconfont icon-icon-test"></i><span> 音乐</span></a></li><li><a class="site-page" href="/pictures/"><i class="fa-fw iconfont icon-tupian"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw iconfont icon-book-2"></i><span> 读书</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw iconfont icon-iconfontyouxihudong"></i><span> 游戏</span></a></li><li><a class="site-page" href="/cates/"><i class="fa-fw iconfont icon-meishi1"></i><span> 美食</span></a></li><li><a class="site-page" href="/artitalk"><i class="fa-fw iconfont icon-xinbaniconshangchuan-"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-kaoyan"></i><span> 考研</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/maths/"><i class="fa-fw iconfont icon-shuxue"></i><span> 高数</span></a></li><li><a class="site-page" href="/englishs/"><i class="fa-fw iconfont icon-yingyu"></i><span> 英语</span></a></li><li><a class="site-page" href="/politics/"><i class="fa-fw iconfont icon-zhengzhi"></i><span> 政治</span></a></li><li><a class="site-page" href="/computers/"><i class="fa-fw iconfont icon-zhuanye"></i><span> 专业</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-wendang"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/"><span> VUE</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/api/#vuex-store"><span> VUEX</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.kancloud.cn/yunye/axios/234845"><span> AXIOS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.jquery123.com/"><span> JQuery</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_htmldom_document.asp"><span> JavaScript</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-gongju"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cli.im/"><span> QR生成器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://smallpdf.com/cn/pdf-to-word"><span> PDF转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.toyaml.com/index.html"><span> YML转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/native_ascii.aspx"><span> 编码转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tool.oschina.net/codeformat/html"><span> Code格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.bejson.com/jsoneditoronline"><span> JSON格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://zh.numberempire.com/latexequationeditor.php"><span> LaTeX编辑器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tableconvert.com/?output=text"><span> MD表格生成</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cron.qqe2.com"><span> CRON表达式</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-tubiaozhizuomoban"></i><span> 学校</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://www.zhihuishu.com/"><span> 智慧树</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://10.40.101.111/indexcs/index.jsp?loginErr=0"><span> CG平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://openjudge.cn/"><span> OJ平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://pintia.cn/problem-sets?tab=0"><span> PAT平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.mooctest.net/login2"><span> 慕测平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://i.chaoxing.com/base?t=1604882532908"><span> 泛雅超星</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tsg.bzu.edu.cn/"><span> BZU图书馆</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://192.168.200.123/"><span> BZU上网认证</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://pay.bzu.edu.cn/xysf/login.aspx?local=zh-cn"><span> BZU支付平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://172.16.16.4/login?errorCode=badCredentials"><span> BZU教务系统</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://mail.bzu.edu.cn/"><span> BZU邮件系统</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-lianjie1"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-xinbaniconshangchuan-1"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/img/top_default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Lucifer</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guide/"><i class="fa-fw iconfont icon-daohang1"></i><span> 导航</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-shijian"></i><span> 时轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-icon"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/skills/"><i class="fa-fw iconfont icon-ai-book"></i><span> 技术</span></a></div><div class="menus_item"><a class="site-page" href="/dk/"><span> 打卡</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-06"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/musics/"><i class="fa-fw iconfont icon-icon-test"></i><span> 音乐</span></a></li><li><a class="site-page" href="/pictures/"><i class="fa-fw iconfont icon-tupian"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw iconfont icon-book-2"></i><span> 读书</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw iconfont icon-iconfontyouxihudong"></i><span> 游戏</span></a></li><li><a class="site-page" href="/cates/"><i class="fa-fw iconfont icon-meishi1"></i><span> 美食</span></a></li><li><a class="site-page" href="/artitalk"><i class="fa-fw iconfont icon-xinbaniconshangchuan-"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-kaoyan"></i><span> 考研</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/maths/"><i class="fa-fw iconfont icon-shuxue"></i><span> 高数</span></a></li><li><a class="site-page" href="/englishs/"><i class="fa-fw iconfont icon-yingyu"></i><span> 英语</span></a></li><li><a class="site-page" href="/politics/"><i class="fa-fw iconfont icon-zhengzhi"></i><span> 政治</span></a></li><li><a class="site-page" href="/computers/"><i class="fa-fw iconfont icon-zhuanye"></i><span> 专业</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-wendang"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/"><span> VUE</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/api/#vuex-store"><span> VUEX</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.kancloud.cn/yunye/axios/234845"><span> AXIOS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.jquery123.com/"><span> JQuery</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_htmldom_document.asp"><span> JavaScript</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-gongju"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cli.im/"><span> QR生成器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://smallpdf.com/cn/pdf-to-word"><span> PDF转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.toyaml.com/index.html"><span> YML转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/native_ascii.aspx"><span> 编码转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tool.oschina.net/codeformat/html"><span> Code格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.bejson.com/jsoneditoronline"><span> JSON格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://zh.numberempire.com/latexequationeditor.php"><span> LaTeX编辑器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tableconvert.com/?output=text"><span> MD表格生成</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cron.qqe2.com"><span> CRON表达式</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-tubiaozhizuomoban"></i><span> 学校</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://www.zhihuishu.com/"><span> 智慧树</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://10.40.101.111/indexcs/index.jsp?loginErr=0"><span> CG平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://openjudge.cn/"><span> OJ平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://pintia.cn/problem-sets?tab=0"><span> PAT平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.mooctest.net/login2"><span> 慕测平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://i.chaoxing.com/base?t=1604882532908"><span> 泛雅超星</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tsg.bzu.edu.cn/"><span> BZU图书馆</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://192.168.200.123/"><span> BZU上网认证</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://pay.bzu.edu.cn/xysf/login.aspx?local=zh-cn"><span> BZU支付平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://172.16.16.4/login?errorCode=badCredentials"><span> BZU教务系统</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://mail.bzu.edu.cn/"><span> BZU邮件系统</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-lianjie1"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-xinbaniconshangchuan-1"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">操作系统 第一章题库</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><h2 id="一-填空题"><a class="markdownIt-Anchor" href="#一-填空题"></a> 一、填空题</h2>
-<h3 id="1用户与操作系统的接口有_________-_________两种"><a class="markdownIt-Anchor" href="#1用户与操作系统的接口有_________-_________两种"></a> 1．用户与操作系统的接口有_________, _________两种.</h3>
-<h3 id="2用户程序调用操作系统有关功能的途径是_________"><a class="markdownIt-Anchor" href="#2用户程序调用操作系统有关功能的途径是_________"></a> 2．用户程序调用操作系统有关功能的途径是_________.</h3>
-<h3 id="3unix系统是_________操作系统-dos系统是_________操作系统"><a class="markdownIt-Anchor" href="#3unix系统是_________操作系统-dos系统是_________操作系统"></a> 3．UNIX系统是_________操作系统, DOS系统是_________操作系统.</h3>
-<h3 id="4现代计算机中-cpu工作方式有目态和管态两种-目态是指运行_________程序-管态是指运行_________程序-执行编译程序时-cpu处于_________"><a class="markdownIt-Anchor" href="#4现代计算机中-cpu工作方式有目态和管态两种-目态是指运行_________程序-管态是指运行_________程序-执行编译程序时-cpu处于_________"></a> 4．现代计算机中, CPU工作方式有目态和管态两种. 目态是指运行_________程序, 管态是指运行_________程序. 执行编译程序时, CPU处于_________.</h3>
-<h3 id="5"><a class="markdownIt-Anchor" href="#5"></a> 5．</h3>
+    })(window)</script><link rel="stylesheet" href="/css/cursor.css"><link rel="stylesheet" href="/css/flipcountdown.css"><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/background.css"/><link rel="stylesheet" href="/swiper/swiper.min.css"><link rel="stylesheet" href="/swiper/swiperstyle.css"><link rel="stylesheet" href="/css/bilibiliBanner.css"  media="defer" onload="this.media='screen'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/hideCategory.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/font-awesome-animation.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css"  media="defer" onload="this.media='all'"><link rel="stylesheet" href=""><meta name="generator" content="Hexo 5.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guide/"><i class="fa-fw iconfont icon-daohang1"></i><span> 导航</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-shijian"></i><span> 时轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-icon"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/skills/"><i class="fa-fw iconfont icon-ai-book"></i><span> 技术</span></a></div><div class="menus_item"><a class="site-page" href="/dk/"><span> 打卡</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-06"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/musics/"><i class="fa-fw iconfont icon-icon-test"></i><span> 音乐</span></a></li><li><a class="site-page" href="/pictures/"><i class="fa-fw iconfont icon-tupian"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw iconfont icon-book-2"></i><span> 读书</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw iconfont icon-iconfontyouxihudong"></i><span> 游戏</span></a></li><li><a class="site-page" href="/cates/"><i class="fa-fw iconfont icon-meishi1"></i><span> 美食</span></a></li><li><a class="site-page" href="/artitalk"><i class="fa-fw iconfont icon-xinbaniconshangchuan-"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-kaoyan"></i><span> 考研</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/maths/"><i class="fa-fw iconfont icon-shuxue"></i><span> 高数</span></a></li><li><a class="site-page" href="/englishs/"><i class="fa-fw iconfont icon-yingyu"></i><span> 英语</span></a></li><li><a class="site-page" href="/politics/"><i class="fa-fw iconfont icon-zhengzhi"></i><span> 政治</span></a></li><li><a class="site-page" href="/computers/"><i class="fa-fw iconfont icon-zhuanye"></i><span> 专业</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-wendang"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/"><span> VUE</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/api/#vuex-store"><span> VUEX</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.kancloud.cn/yunye/axios/234845"><span> AXIOS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.jquery123.com/"><span> JQuery</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_htmldom_document.asp"><span> JavaScript</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-gongju"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cli.im/"><span> QR生成器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://smallpdf.com/cn/pdf-to-word"><span> PDF转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.toyaml.com/index.html"><span> YML转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/native_ascii.aspx"><span> 编码转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tool.oschina.net/codeformat/html"><span> Code格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.bejson.com/jsoneditoronline"><span> JSON格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://zh.numberempire.com/latexequationeditor.php"><span> LaTeX编辑器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tableconvert.com/?output=text"><span> MD表格生成</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cron.qqe2.com"><span> CRON表达式</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-tubiaozhizuomoban"></i><span> 学校</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://www.zhihuishu.com/"><span> 智慧树</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://10.40.101.111/indexcs/index.jsp?loginErr=0"><span> CG平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://openjudge.cn/"><span> OJ平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://pintia.cn/problem-sets?tab=0"><span> PAT平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.mooctest.net/login2"><span> 慕测平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://i.chaoxing.com/base?t=1604882532908"><span> 泛雅超星</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tsg.bzu.edu.cn/"><span> BZU图书馆</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://192.168.200.123/"><span> BZU上网认证</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://pay.bzu.edu.cn/xysf/login.aspx?local=zh-cn"><span> BZU支付平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://172.16.16.4/login?errorCode=badCredentials"><span> BZU教务系统</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://mail.bzu.edu.cn/"><span> BZU邮件系统</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-lianjie1"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-xinbaniconshangchuan-1"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url('/img/top_default.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Lucifer</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-zhuye"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/guide/"><i class="fa-fw iconfont icon-daohang1"></i><span> 导航</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw iconfont icon-shijian"></i><span> 时轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw iconfont icon-biaoqian"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-icon"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/skills/"><i class="fa-fw iconfont icon-ai-book"></i><span> 技术</span></a></div><div class="menus_item"><a class="site-page" href="/dk/"><span> 打卡</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-06"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/musics/"><i class="fa-fw iconfont icon-icon-test"></i><span> 音乐</span></a></li><li><a class="site-page" href="/pictures/"><i class="fa-fw iconfont icon-tupian"></i><span> 照片</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw iconfont icon-dianying1"></i><span> 电影</span></a></li><li><a class="site-page" href="/books/"><i class="fa-fw iconfont icon-book-2"></i><span> 读书</span></a></li><li><a class="site-page" href="/games/"><i class="fa-fw iconfont icon-iconfontyouxihudong"></i><span> 游戏</span></a></li><li><a class="site-page" href="/cates/"><i class="fa-fw iconfont icon-meishi1"></i><span> 美食</span></a></li><li><a class="site-page" href="/artitalk"><i class="fa-fw iconfont icon-xinbaniconshangchuan-"></i><span> 说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-kaoyan"></i><span> 考研</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/maths/"><i class="fa-fw iconfont icon-shuxue"></i><span> 高数</span></a></li><li><a class="site-page" href="/englishs/"><i class="fa-fw iconfont icon-yingyu"></i><span> 英语</span></a></li><li><a class="site-page" href="/politics/"><i class="fa-fw iconfont icon-zhengzhi"></i><span> 政治</span></a></li><li><a class="site-page" href="/computers/"><i class="fa-fw iconfont icon-zhuanye"></i><span> 专业</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-wendang"></i><span> 文档</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cn.vuejs.org/v2/api/"><span> VUE</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://vuex.vuejs.org/zh/api/#vuex-store"><span> VUEX</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.kancloud.cn/yunye/axios/234845"><span> AXIOS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.jquery123.com/"><span> JQuery</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.w3school.com.cn/js/js_htmldom_document.asp"><span> JavaScript</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-gongju"></i><span> 工具</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cli.im/"><span> QR生成器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://smallpdf.com/cn/pdf-to-word"><span> PDF转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.toyaml.com/index.html"><span> YML转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/native_ascii.aspx"><span> 编码转换器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tool.oschina.net/codeformat/html"><span> Code格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://www.bejson.com/jsoneditoronline"><span> JSON格式化</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://zh.numberempire.com/latexequationeditor.php"><span> LaTeX编辑器</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tableconvert.com/?output=text"><span> MD表格生成</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cron.qqe2.com"><span> CRON表达式</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw iconfont icon-tubiaozhizuomoban"></i><span> 学校</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://www.zhihuishu.com/"><span> 智慧树</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://10.40.101.111/indexcs/index.jsp?loginErr=0"><span> CG平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://openjudge.cn/"><span> OJ平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://pintia.cn/problem-sets?tab=0"><span> PAT平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://www.mooctest.net/login2"><span> 慕测平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://i.chaoxing.com/base?t=1604882532908"><span> 泛雅超星</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://tsg.bzu.edu.cn/"><span> BZU图书馆</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://192.168.200.123/"><span> BZU上网认证</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://pay.bzu.edu.cn/xysf/login.aspx?local=zh-cn"><span> BZU支付平台</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="http://172.16.16.4/login?errorCode=badCredentials"><span> BZU教务系统</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://mail.bzu.edu.cn/"><span> BZU邮件系统</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-lianjie1"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-xinbaniconshangchuan-1"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/messageboard/"><i class="fa-fw iconfont icon-liuyanban-05"></i><span> 留言板</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="page-site-info"><h1 id="site-title">第一章 操作系统引论</h1></div></header><main class="layout" id="content-inner"><div id="page"><div id="article-container"><h2 id="第一章-操作系统引论"><a class="markdownIt-Anchor" href="#第一章-操作系统引论"></a> 第一章 操作系统引论</h2>
 <ul>
-<li>从资源分配的角度讲, 计算机系统中的资源分为_________、_________、<em><strong><strong><strong><strong>和</strong></strong></strong></strong></em>.</li>
-<li>操作系统相应的组成部分是_________、_________、<em><strong><strong><strong><strong>和</strong></strong></strong></strong></em>.</li>
+<li>
+<p>【目的要求】</p>
+<ol>
+<li>[了解]OS的引入和发展;</li>
+<li>[理解]多道程序设计技术;</li>
+<li>[掌握]操作系统的功能和特征、操作系统的分类;</li>
+<li>[了解]操作系统的结构设计.</li>
+</ol>
+</li>
+<li>
+<p>【重点与难点】</p>
+<ol>
+<li>操作系统的功能和特征;</li>
+<li>操作系统的分类.</li>
+</ol>
+</li>
 </ul>
-<h3 id="6根据服务对象不同-常用的单处理机os可以分为如下三种类型"><a class="markdownIt-Anchor" href="#6根据服务对象不同-常用的单处理机os可以分为如下三种类型"></a> 6．根据服务对象不同, 常用的单处理机OS可以分为如下三种类型：</h3>
+<h2 id="11-操作系统的目标和作用"><a class="markdownIt-Anchor" href="#11-操作系统的目标和作用"></a> 1.1 操作系统的目标和作用</h2>
+<h4 id="111-操作系统的目标"><a class="markdownIt-Anchor" href="#111-操作系统的目标"></a> 1.1.1 操作系统的目标</h4>
 <ul>
-<li>允许多个用户在其终端上同时交互地使用计算机的OS称为_________, 它通常采用_________策略为用户服务;</li>
-<li>允许用户把若干个作业提交计算机系统集中处理的OS, 称为_________, 衡量这种系统性能的一个主要指标是系统的_________;</li>
-<li>在_________的控制下, 计算机系统能及时处理由过程控制反馈的数据并作出响应. 设计这种系统时, 应首先考虑系统的_________.</li>
+<li>特点:
+<ol>
+<li>方便性</li>
+<li>有效性</li>
+<li>可扩充性</li>
+<li>开放性</li>
+</ol>
+</li>
 </ul>
-<h3 id="7实时系统通常采用_________方法来提高可靠性"><a class="markdownIt-Anchor" href="#7实时系统通常采用_________方法来提高可靠性"></a> 7．实时系统通常采用_________方法来提高可靠性.</h3>
-<h2 id="二-单项选择题"><a class="markdownIt-Anchor" href="#二-单项选择题"></a> 二、单项选择题</h2>
-<h3 id="1计算机的操作系统是一种_________"><a class="markdownIt-Anchor" href="#1计算机的操作系统是一种_________"></a> 1．计算机的操作系统是一种_________.</h3>
-<pre><code>(A) 应用软件              (B) 系统软件
-(C) 工具软件              (D) 字表处理软件
-</code></pre>
-<h3 id="2unix属于一种_________操作系统"><a class="markdownIt-Anchor" href="#2unix属于一种_________操作系统"></a> 2．UNIX属于一种_________操作系统.</h3>
-<pre><code>(A) 分时系统              (B) 批处理系统
-(C) 实时系统              (D) 分布式系统
-</code></pre>
-<h3 id="3操作系统是一组_________程序"><a class="markdownIt-Anchor" href="#3操作系统是一组_________程序"></a> 3．操作系统是一组_________程序.</h3>
-<pre><code>(A) 文件管理              (B) 中断处理
-(C) 资源管理              (D) 设备管理
-</code></pre>
-<h3 id="4下列四个操作系统中-是分时系统的为_________"><a class="markdownIt-Anchor" href="#4下列四个操作系统中-是分时系统的为_________"></a> 4．下列四个操作系统中, 是分时系统的为_________.</h3>
-<pre><code>(A) CP／M                (B) MS－DOS
-(C) UNIX                 (D) WINDOWS NT
-</code></pre>
-<h3 id="5用户要在程序一级获得系统帮助-必须通过_________"><a class="markdownIt-Anchor" href="#5用户要在程序一级获得系统帮助-必须通过_________"></a> 5．用户要在程序一级获得系统帮助, 必须通过_________.</h3>
-<pre><code>(A) 进程调度              (B) 作业调度
-(C) 键盘命令              (D) 系统调用
-</code></pre>
-<h3 id="6批处理系统的主要缺点是_________"><a class="markdownIt-Anchor" href="#6批处理系统的主要缺点是_________"></a> 6．批处理系统的主要缺点是_________.</h3>
-<pre><code>(A) CPU的利用率不高       (B) 失去了交互性
-(C) 不具备并行性            (D) 以上都不是
-</code></pre>
-<h3 id="7dos操作系统主要的功能是_________"><a class="markdownIt-Anchor" href="#7dos操作系统主要的功能是_________"></a> 7．DOS操作系统主要的功能是_________.</h3>
-<pre><code>(A) 文件管理程序           (B) 中断处理程序
-(C) 作业管理程序           (D) 打印管理程序
-</code></pre>
-<h3 id="8在pascal程序中调用的sinx-是_________"><a class="markdownIt-Anchor" href="#8在pascal程序中调用的sinx-是_________"></a> 8．在PAsCAl程序中调用的sin(x) 是_________.</h3>
-<pre><code>(A) 系统调用              (B) 标准子程序
-(C) 操作系统命令          (D) 进程
-</code></pre>
-<h3 id="9计算机操作系统的功能是_________"><a class="markdownIt-Anchor" href="#9计算机操作系统的功能是_________"></a> 9．计算机操作系统的功能是_________.</h3>
-<pre><code>(A) 把源程序代码转换为目标代码
-(B) 实现计算机用户之间的相互交流
-(C) 完成计算机硬件与软件之间的转换
-(D) 控制、管理计算机系统的资源和程序的执行
-</code></pre>
-<h3 id="10在分时系统中-时间片一定时_________-响应时间越长"><a class="markdownIt-Anchor" href="#10在分时系统中-时间片一定时_________-响应时间越长"></a> 10．在分时系统中, 时间片一定时,_________, 响应时间越长.</h3>
-<pre><code>(A) 内存越多              (B) 用户数越多
-(C) 内存越少              (D) 用户数越少
-</code></pre>
-<h3 id="11清除内存指令是系统中的_________指令"><a class="markdownIt-Anchor" href="#11清除内存指令是系统中的_________指令"></a> 11．“清除内存”指令是系统中的_________指令.</h3>
-<pre><code>(A) 通道                     (B) 用户
-(C) 特权                     (D) 非特权
-</code></pre>
-<h3 id="12操作系统的基本特征-一是并行性-另一是-_________"><a class="markdownIt-Anchor" href="#12操作系统的基本特征-一是并行性-另一是-_________"></a> 12．操作系统的基本特征, 一是并行性, 另一是 _________.</h3>
-<pre><code>(A) 动态性                   (B) 交互性
-(C) 共享性                   (D) 制约性
-</code></pre>
-<h3 id="13_________程序可执行特权指令"><a class="markdownIt-Anchor" href="#13_________程序可执行特权指令"></a> 13．_________程序可执行特权指令.</h3>
-<pre><code>(A) 同组用户                 (B) 操作系统
-(C) 特权用户                 (D) 一般用户
-</code></pre>
-<h3 id="14多道批处理系统最显著的特点是_________"><a class="markdownIt-Anchor" href="#14多道批处理系统最显著的特点是_________"></a> 14．多道批处理系统最显著的特点是_________.</h3>
-<pre><code>(A) 成批的处理用户作业          (B) 作业是通过读卡机进入系统的
-(C) 用户和作业间没有交互作用     (D) (A) 和(B) 
-</code></pre>
-<h2 id="三-多项选择题"><a class="markdownIt-Anchor" href="#三-多项选择题"></a> 三、多项选择题</h2>
-<h3 id="1关于操作系统的叙述_________是正确的"><a class="markdownIt-Anchor" href="#1关于操作系统的叙述_________是正确的"></a> 1．关于操作系统的叙述_________是正确的.</h3>
-<pre><code>(A) 操作系统是管理资源的程序
-(B) 操作系统是管理用户程序执行的程序
-(C) 操作系统是能使系统资源提高效率的程序  
-(D) 操作系统是能方便用户编程的程序
-(E) 操作系统是能方便用户使用计算机的程序
-</code></pre>
-<h3 id="2设计多道批处理系统时-要考虑的因素有_________"><a class="markdownIt-Anchor" href="#2设计多道批处理系统时-要考虑的因素有_________"></a> 2．设计多道批处理系统时, 要考虑的因素有_________.</h3>
-<pre><code>(A) 交互性                    (B) 及时性      
-(C) 系统效率                  (D) 吞吐量        
-(E) 实时性 
-</code></pre>
-<h3 id="3在批处理系统中-提交的一个作业中应包含_________"><a class="markdownIt-Anchor" href="#3在批处理系统中-提交的一个作业中应包含_________"></a> 3．在批处理系统中, 提交的一个作业中应包含_________.</h3>
-<pre><code>(A) 作业说明书                (B) 程序
-(C) 进程控制块                (D) PCB 
-(E) 数据 
-</code></pre>
-<h3 id="4若中央处理机处于目态-可以执行的指令有_________"><a class="markdownIt-Anchor" href="#4若中央处理机处于目态-可以执行的指令有_________"></a> 4．若中央处理机处于“目态”, 可以执行的指令有_________.</h3>
-<pre><code>(A) 读系统时钟                (B) 写系统时钟 
-(C) 读用户内存自身数据        (D) 写用户内存自身数据  
-(E) 清除整个内存
-</code></pre>
-<h3 id="5设计多道批处理系统时-不需要考虑的因素有_________"><a class="markdownIt-Anchor" href="#5设计多道批处理系统时-不需要考虑的因素有_________"></a> 5．设计多道批处理系统时, 不需要考虑的因素有_________.</h3>
-<pre><code>(A) 交互性                    (B) 及时性
-(C) 系统效率                  (D) 吞吐量
-(E) 实时性 
-</code></pre>
-<h3 id="6若中央处理机处于管态-可以执行的指令有_________"><a class="markdownIt-Anchor" href="#6若中央处理机处于管态-可以执行的指令有_________"></a> 6．若中央处理机处于“管态”, 可以执行的指令有_________.</h3>
-<pre><code>(A) 读系统时钟                (B) 写系统时钟 
-(C) 读用户内存自身数据        (D) 写用户内存自身数据   
-(E) 清除整个内存
-</code></pre>
-<h3 id="7程序状态字psw-通常应包括_________"><a class="markdownIt-Anchor" href="#7程序状态字psw-通常应包括_________"></a> 7．程序状态字(PSW) 通常应包括_________.</h3>
-<pre><code>(A) 作业说明书地址            (B) 程序基本状态
-(C) 中断码                    (D) 中断屏蔽位      
-(E) 系统所使用的调度算法 
-</code></pre>
-<h3 id="8分布式计算机系统的结构通常包括_________"><a class="markdownIt-Anchor" href="#8分布式计算机系统的结构通常包括_________"></a> 8．分布式计算机系统的结构通常包括_________.</h3>
-<pre><code>(A) 环形结构                  (B) 星形结构
-(C) 方形结构                  (D) 树形结构              
-(E) 圆形结构
-</code></pre>
-<h3 id="9操作系统与用户的接口包括_________"><a class="markdownIt-Anchor" href="#9操作系统与用户的接口包括_________"></a> 9．操作系统与用户的接口包括_________.</h3>
-<pre><code>(A) 编译程序                  (B) 系统调用
-(C) 作业调度                  (D) 进程调度              
-(E) 作业控制
-</code></pre>
-<h3 id="10操作系统的基本特征有________"><a class="markdownIt-Anchor" href="#10操作系统的基本特征有________"></a> 10．操作系统的基本特征有________.</h3>
-<pre><code>(A) 动态性                  (B) 交互性
-(C) 共享性                  (D) 制约性      
-(E) 并行性
-</code></pre>
-<h3 id="11以下________属性不属于分时系统的特征"><a class="markdownIt-Anchor" href="#11以下________属性不属于分时系统的特征"></a> 11．以下________属性不属于分时系统的特征.</h3>
-<pre><code>(A) 多路性          (B) 成批性       
-(C) 交互性          (D) 独占性       
-(E) 非交互性
-</code></pre>
-<h3 id="12以下________不属于实时系统的特征"><a class="markdownIt-Anchor" href="#12以下________不属于实时系统的特征"></a> 12．以下________不属于实时系统的特征.</h3>
-<pre><code>(A) 及时性          (B) 可靠性       
-(C) 专用系统        (D) 通用系统      
-(E) 交互性
-</code></pre>
-<h2 id="四-是非判断题"><a class="markdownIt-Anchor" href="#四-是非判断题"></a> 四、是非判断题</h2>
-<h3 id="1在现代计算机系统中-用户用高级语言编写的源程序必须通过编译程序翻译成目标程序之后方可运行-因此-用户与计算机之间的接口是编译程序"><a class="markdownIt-Anchor" href="#1在现代计算机系统中-用户用高级语言编写的源程序必须通过编译程序翻译成目标程序之后方可运行-因此-用户与计算机之间的接口是编译程序"></a> 1．在现代计算机系统中, 用户用高级语言编写的源程序必须通过编译程序翻译成目标程序之后方可运行, 因此, 用户与计算机之间的接口是编译程序. ( )</h3>
-<h3 id="2当处理机处于管态时-只能执行特权指令"><a class="markdownIt-Anchor" href="#2当处理机处于管态时-只能执行特权指令"></a> 2．当处理机处于管态时, 只能执行特权指令. ( )</h3>
-<h2 id="五-简答题"><a class="markdownIt-Anchor" href="#五-简答题"></a> 五、简答题</h2>
-<h3 id="1简述操作系统有哪些特征"><a class="markdownIt-Anchor" href="#1简述操作系统有哪些特征"></a> 1．简述操作系统有哪些特征？</h3>
-<h3 id="2操作系统的功能有哪几方面它们各自的含义是什么"><a class="markdownIt-Anchor" href="#2操作系统的功能有哪几方面它们各自的含义是什么"></a> 2．操作系统的功能有哪几方面？它们各自的含义是什么？</h3>
-<h3 id="3操作系统有哪几种类型-各自的工作方式是怎样的"><a class="markdownIt-Anchor" href="#3操作系统有哪几种类型-各自的工作方式是怎样的"></a> 3．操作系统有哪几种类型, 各自的工作方式是怎样的？</h3>
-<h3 id="4简述用户如何利用系统调用-以及系统在执行系统调用时的工作过程"><a class="markdownIt-Anchor" href="#4简述用户如何利用系统调用-以及系统在执行系统调用时的工作过程"></a> 4．简述用户如何利用系统调用, 以及系统在执行系统调用时的工作过程.</h3>
-<h3 id="5简述操作系统在一个计算机系统中的地位"><a class="markdownIt-Anchor" href="#5简述操作系统在一个计算机系统中的地位"></a> 5．简述操作系统在一个计算机系统中的地位.</h3>
-<h3 id="6为什么系统的指令分为特权指令和非特权指令"><a class="markdownIt-Anchor" href="#6为什么系统的指令分为特权指令和非特权指令"></a> 6．为什么系统的指令分为“特权指令”和“非特权指令”</h3>
-</div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Lucifer LGX</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Nightliuguoxing"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Nightliuguoxing" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2050180797lgx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">QQ 丨 2050180797</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/english/index/" title="英二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="英二"/></a><div class="content"><a class="title" href="/2021/03/27/english/index/" title="英二">英二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/maths/index/" title="数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数二"/></a><div class="content"><a class="title" href="/2021/03/27/maths/index/" title="数二">数二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-22"/></a><div class="content"><a class="title" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22">DATE 2021-03-22</a><time datetime="2021-03-21T16:00:00.000Z" title="发表于 2021-03-22 00:00:00">2021-03-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/maths/ZY/" title="张宇 - 数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="张宇 - 数二"/></a><div class="content"><a class="title" href="/2021/03/21/maths/ZY/" title="张宇 - 数二">张宇 - 数二</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-21"/></a><div class="content"><a class="title" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21">DATE 2021-03-21</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+<h4 id="112-操作系统的作用"><a class="markdownIt-Anchor" href="#112-操作系统的作用"></a> 1.1.2 操作系统的作用</h4>
+<ol>
+<li>OS作为用户与计算机硬件系统之间的接口<br />
+<code>OS是一个系统软件, 因而这种接口是软件接口.</code></li>
+</ol>
+<ul>
+<li>用户通过三种方式使用计算机
+<ul>
+<li>命令方式</li>
+<li>系统调用方式</li>
+<li>图形、窗口方式</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>OS作为计算机系统资源的管理者</li>
+</ol>
+<ul>
+<li>
+<p>资源分为四类</p>
+<ol>
+<li>处理器</li>
+<li>存储器</li>
+<li>I/O设备</li>
+<li>信息(数据和程序)</li>
+</ol>
+</li>
+<li>
+<p>OS的主要功能是对这四类资源进行管理</p>
+<ul>
+<li>处理机管理，用于分配和控制处理机;</li>
+<li>存储器管理，主要负责内存的分配与回收;</li>
+<li>I/O设备管理，负责I/O设备的分配与操纵;</li>
+<li>文件管理，负责文件的存取、共享和保护.</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>OS实现了对计算机资源的抽象</li>
+</ol>
+<h4 id="113-推动操作系统发展的主要动力"><a class="markdownIt-Anchor" href="#113-推动操作系统发展的主要动力"></a> 1.1.3 推动操作系统发展的主要动力</h4>
+<ol>
+<li>不断提高计算机资源利用率</li>
+<li>方便用户</li>
+<li>器件的不断更新换代：主要元件(四代)、字长、内存、外设(外存、光盘、扫描仪等)</li>
+<li>计算机体系结构的不断发展：单处理机、多处理机、网络</li>
+<li>不断提出新的应用需求：如实时OS、多媒体功能、嵌入式OS等。</li>
+</ol>
+<h2 id="12-操作系统的发展过程"><a class="markdownIt-Anchor" href="#12-操作系统的发展过程"></a> 1.2 操作系统的发展过程</h2>
+<h4 id="121-未配置操作系统的计算机系统"><a class="markdownIt-Anchor" href="#121-未配置操作系统的计算机系统"></a> 1.2.1 未配置操作系统的计算机系统</h4>
+<ol>
+<li>人工操作方式</li>
+</ol>
+<ul>
+<li>[缺点]:
+<ul>
+<li>用户独占全机</li>
+<li>CPU等待人工操作</li>
+</ul>
+</li>
+</ul>
+<p>人工操作方式严重降低了计算机资源的利用率，此即所谓的人机矛盾。CPU的速度在迅速提高，而I/O设备的速度却提高很慢，使得CPU与I/O设备之间速度不匹配的矛盾更加突出。</p>
+<ol start="2">
+<li>脱机输入/输出(Off-Line I/O)方式</li>
+</ol>
+<ul>
+<li>[优点]
+<ul>
+<li>减少了CPU的空闲时间</li>
+<li>提高了I/O速度</li>
+</ul>
+</li>
+</ul>
+<p>在脱机I/O技术的基础上产生了单道批处理系统。</p>
+<h4 id="122-单道批处理系统"><a class="markdownIt-Anchor" href="#122-单道批处理系统"></a> 1.2.2 单道批处理系统</h4>
+<ol>
+<li>
+<p>单道批处理系统(Simple Batch Processing System)的处理过程<br />
+<code>作业</code>：指用户程序及其所需要的数据和命令的集合<br />
+<code>单道</code>：内存中始终只保持一道作业<br />
+人们习惯上把按照这种形式顺序输入、执行的一批作业称为<code>作业流</code></p>
+</li>
+<li>
+<p>单道批处理系统的特征</p>
+</li>
+</ol>
+<ul>
+<li>[特征]
+<ul>
+<li>自动性：无需用户干预</li>
+<li>顺序性 ：一般情况下，先进入内存的作业先完成</li>
+<li>单道性：造成内存、CPU、I/O等资源浪费 [缺点]</li>
+</ul>
+</li>
+</ul>
+<h4 id="123-多道批处理系统"><a class="markdownIt-Anchor" href="#123-多道批处理系统"></a> 1.2.3 多道批处理系统</h4>
+<ol>
+<li>
+<p>多道程序设计的基本概念</p>
+</li>
+<li>
+<p>两个概念</p>
+<ul>
+<li>多道程序设计: 指同时把几个作业放入内存,并允许它们交替执行,共享系统资源</li>
+<li>多道程序系统: 允许多个程序执行的操作系统</li>
+</ul>
+</li>
+<li>
+<p>[优点]</p>
+<ul>
+<li>提高CPU的利用率</li>
+<li>可提高内存和I/O设备利用率</li>
+<li>增加系统吞吐量</li>
+</ul>
+</li>
+</ol>
+<p><img src="./OS-01-001.jpg" alt="单道和多道程序运行情况" /></p>
+<ol start="4">
+<li>
+<p>[特征]</p>
+<ul>
+<li>多道性</li>
+<li>无序性</li>
+<li>调度性: 两级调度</li>
+</ul>
+</li>
+<li>
+<p>[缺点]</p>
+<ul>
+<li>平均周转时间长</li>
+<li>无交互能力</li>
+<li><code>周转时间</code>：是指从作业提交给系统开始,到作业完成为止的这段时间间隔.</li>
+</ul>
+</li>
+<li>
+<p>多道批处理系统需要解决的问题</p>
+<ul>
+<li>处理机管理问题</li>
+<li>内存管理问题</li>
+<li>I/O设备管理问题</li>
+<li>文件管理问题</li>
+<li>作业管理问题</li>
+<li>用户与系统的接口问题</li>
+</ul>
+</li>
+</ol>
+<p><code>操作系统定义</code>: 操作系统是一组控制和管理计算机硬件和软件资源，合理地对各类作业进行调度，以及方便用户使用的程序的集合</p>
+<h4 id="124-分时系统"><a class="markdownIt-Anchor" href="#124-分时系统"></a> 1.2.4 分时系统</h4>
+<ol>
+<li>分时系统(Time-Sharing System)的产生:
+<ul>
+<li>人-机交互</li>
+<li>共享主机</li>
+</ul>
+</li>
+</ol>
+<p><code>分时系统的定义</code>: 在一台主机上连接了多个配有显示器和键盘的终端并由此所组成的系统，该系统允许多个用户同时通过自己的终端，以交互方式使用计算机，共享主机中的资源</p>
+<ol start="2">
+<li>
+<p>分时系统实现中的关键问题</p>
+<ul>
+<li>(1) 及时接收：配置多路卡和缓冲区。</li>
+<li>(2) 及时处理：作业直接进入内存；使用时间片轮转算法。</li>
+</ul>
+</li>
+<li>
+<p>分时系统的特征</p>
+<ul>
+<li>(1) 多路性</li>
+<li>(2) 独立性</li>
+<li>(3) 及时性</li>
+<li>(4) 交互性</li>
+</ul>
+</li>
+</ol>
+<h4 id="125-实时系统"><a class="markdownIt-Anchor" href="#125-实时系统"></a> 1.2.5 实时系统</h4>
+<ol>
+<li>
+<p>实时系统的类型</p>
+<ul>
+<li>(1) 工业(武器)控制系统 如：炼钢、化工生产的过程控制，火炮自动控制、飞机自动驾驶、导弹制导等</li>
+<li>(2) 信息查询系统 如：飞机或火车订票系统</li>
+<li>(3) 多媒体系统</li>
+<li>(4) 嵌入式系统</li>
+</ul>
+</li>
+<li>
+<p>实时任务的类型</p>
+</li>
+</ol>
+<ul>
+<li>按任务执行时是否呈现周期性来划分
+<ul>
+<li>周期性实时任务。</li>
+<li>非周期性实时任务。</li>
+</ul>
+</li>
+</ul>
+<p><code>开始截止时间——任务在某时间以前必须开始执行；</code><br />
+<code>完成截止时间——任务在某时间以前必须完成。</code></p>
+<ul>
+<li>根据对截止时间的要求来划分
+<ul>
+<li>硬实时任务(hard real-time task)。系统必须满足任务对截止时间的要求，否则可能出现难以预测的结果。</li>
+<li>软实时任务(Soft real-time task)。它也联系着一个截止时间，但并不严格，若偶尔错过了任务的截止时间， 对系统产生的影响也不会太大。</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>实时系统与分时系统特征的比较
+<ul>
+<li>多路性。分时服务；多路采集</li>
+<li>独立性。 查询交互；采集和控制</li>
+<li>及时性。 人；控制对象</li>
+<li>交互性。</li>
+<li>可靠性。实时系统往往采取多级容错技术</li>
+</ul>
+</li>
+</ol>
+<h4 id="126-微机操作系统的发展"><a class="markdownIt-Anchor" href="#126-微机操作系统的发展"></a> 1.2.6 微机操作系统的发展</h4>
+<ul>
+<li>单用户单任务操作系统: CP/M和MS-DOS</li>
+<li>单用户多任务操作系统: Windows</li>
+<li>多用户多任务操作系统: Unix OS</li>
+</ul>
+<h2 id="作业"><a class="markdownIt-Anchor" href="#作业"></a> 作业</h2>
+<h4 id="例题一"><a class="markdownIt-Anchor" href="#例题一"></a> 例题一</h4>
+<div class="note default simple"><p>设内存中有三道程序A、B、C，它们按A、B、C的优先次序执行（可抢占）。它们的计算和I/O操作的时间如下表所示（单位：ms）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">操作 \ 程序</th>
+<th style="text-align:center">A</th>
+<th style="text-align:center">B</th>
+<th style="text-align:center">C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">计算</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">60</td>
+<td style="text-align:center">20</td>
+</tr>
+<tr>
+<td style="text-align:center">I/O操作</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">40</td>
+</tr>
+<tr>
+<td style="text-align:center">计算</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">20</td>
+</tr>
+</tbody>
+</table>
+<p>假设三道程序使用相同设备进行I/O操作，即程序以串行方式使用设备，试画出单道运行和多道运行的时间关系图（调度程序的执行时间忽略不计）。在两种情况下，完成这三道程序要花多少时间?</p>
+</div>
+<h4 id="例题二"><a class="markdownIt-Anchor" href="#例题二"></a> 例题二</h4>
+<div class="note default simple"><p>一个多道批处理系统中仅有P1和P2两个作业，P2比P1晚5ms到达，它的计算和I/O操作顺序如下：<br />
+- P1：计算60ms，I/O80ms，计算20ms<br />
+- P2：计算120ms，I/O40ms，计算40ms<br />
+若不考虑调度和切换时间，则完成两个作业需要的时间最少是：</p>
+<p>A.240 ms	<br />
+B.260 ms	<br />
+C.340 ms	<br />
+D.360 ms</p>
+</div>
+<h2 id="13-操作系统的基本特征"><a class="markdownIt-Anchor" href="#13-操作系统的基本特征"></a> 1.3 操作系统的基本特征</h2>
+<h4 id="131-并发性"><a class="markdownIt-Anchor" href="#131-并发性"></a> 1.3.1 并发性</h4>
+<p><code>并行性</code>: 指两个或多个事件在<code>同一时刻</code>发生<br />
+<code>并发性</code>: 指两个或多个事件在<code>同一时间</code> <code>间隔</code>内发生</p>
+<h4 id="132-共享性"><a class="markdownIt-Anchor" href="#132-共享性"></a> 1.3.2 共享性</h4>
+<p>在操作系统环境下，所谓共享是指系统中的资源可供内存中多个并发执行的进程(线程)共同使用。由于资源属性的不同，进程对资源共享的方式也不同，目前主要有以下两种资源共享方式:</p>
+<ul>
+<li>互斥共享方式: 我们把这种资源共享方式称为互斥式共享，而把在一段时间内只允许一个进程访问的资源称为临界资源或独占资源</li>
+<li>同时访问方式</li>
+</ul>
+<p><code>并发</code>和<code>共享</code>是操作系统的两个<code>最基本</code>的特征，它们又是<code>互为存在</code>的<code>条件</code></p>
+<ul>
+<li>资源共享是以程序（进程）的并发执行为条件的，若系统不允许程序并发执行，自然不存在资源共享问题</li>
+<li>若系统不能对资源共享实施有效管理，协调好诸进程对共享资源的访问，也必然影响到程序并发执行的程度，甚至根本无法并发执行</li>
+</ul>
+<h4 id="133-虚拟性"><a class="markdownIt-Anchor" href="#133-虚拟性"></a> 1.3.3 虚拟性</h4>
+<p>操作系统中的所谓&quot;虚拟&quot;: <code>通过某种技术把一个物理实体变为若干个逻辑上的对应物</code></p>
+<ul>
+<li>时分复用技术（即分时使用方式）
+<ul>
+<li>虚拟处理机技术</li>
+<li>虚拟设备技术</li>
+</ul>
+</li>
+<li>空分复用技术
+<ul>
+<li>虚拟磁盘技术：分卷</li>
+<li>虚拟存储器技术：请求调入和置换</li>
+</ul>
+</li>
+</ul>
+<h4 id="134-异步性"><a class="markdownIt-Anchor" href="#134-异步性"></a> 1.3.4 异步性</h4>
+<h2 id="14-操作系统的主要功能"><a class="markdownIt-Anchor" href="#14-操作系统的主要功能"></a> 1.4 操作系统的主要功能</h2>
+<h4 id="141-处理机管理功能"><a class="markdownIt-Anchor" href="#141-处理机管理功能"></a> 1.4.1 处理机管理功能</h4>
+<ol>
+<li>
+<p>进程控制: 主要功能如下</p>
+<ul>
+<li>作业创建进程、撤消已结束的进程</li>
+<li>控制进程在运行过程中的状态转换</li>
+</ul>
+</li>
+<li>
+<p>进程同步</p>
+<ul>
+<li>进程互斥方式，这是指诸进程（线程）在对临界资源进行访问时，应采用互斥方式；</li>
+<li>进程同步方式，指在相互合作去完成共同任务的诸进程(线程)间，由同步机构对它们的执行次序加以协调</li>
+</ul>
+</li>
+<li>
+<p>进程通信: 通常在它们之间是采用<code>直接通信</code>方式</p>
+</li>
+<li>
+<p>调度: 在传统的操作系统中，包括<code>作业调度</code>和<code>进程调度</code>两步</p>
+</li>
+</ol>
+<h4 id="142-存储器管理功能"><a class="markdownIt-Anchor" href="#142-存储器管理功能"></a> 1.4.2 存储器管理功能</h4>
+<ol>
+<li>内存分配: 采取<code>静态</code>和<code>动态</code>两种方式</li>
+</ol>
+<p>为了实现内存分配，在内存分配的机制中应具有这样的结构和功能：</p>
+<ul>
+<li>内存分配数据结构，该结构用于记录内存空间的使用情况，作为内存分配的依据；</li>
+<li>内存分配功能，系统按照一定的内存分配算法， 为用户程序分配内存空间；</li>
+<li>内存回收功能，系统对于用户不再需要的内存，通过用户的释放请求，去完成系统的回收功能。</li>
+</ul>
+<ol start="2">
+<li>内存保护</li>
+<li>地址映射</li>
+<li>内存扩充</li>
+</ol>
+<h4 id="143-设备管理功能"><a class="markdownIt-Anchor" href="#143-设备管理功能"></a> 1.4.3 设备管理功能</h4>
+<ol>
+<li>缓冲管理</li>
+<li>设备分配</li>
+<li>设备处理: 设备处理程序又称为设备驱动程序</li>
+</ol>
+<h4 id="144-文件管理功能"><a class="markdownIt-Anchor" href="#144-文件管理功能"></a> 1.4.4 文件管理功能</h4>
+<ol>
+<li>文件存储空间的管理</li>
+<li>目录管理</li>
+<li>文件的读/写管理和保护
+<ul>
+<li>文件的读/写管理</li>
+<li>文件保护
+<ul>
+<li>防止未经核准的用户存取文件；</li>
+<li>防止冒名顶替存取文件；</li>
+<li>防止以不正确的方式使用文件。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="145-操作系统与用户之间的接口"><a class="markdownIt-Anchor" href="#145-操作系统与用户之间的接口"></a> 1.4.5  操作系统与用户之间的接口</h4>
+<ol>
+<li>用户接口</li>
+</ol>
+<ul>
+<li>联机用户接口: 它由一组键盘操作<code>命令及命令解释程序</code>所组成</li>
+<li>脱机用户接口: 该接口是为批处理作业的用户提供的，故也称为<code>批处理用户接口</code>;该接口由一组作业控制语言JCL组成</li>
+<li>图形用户接口</li>
+</ul>
+<ol start="2">
+<li>程序接口: 该接口是为用户程序在执行中访问系统资源而设置的，<code>是用户程序取得操作系统服务的惟一途径</code>;它是由一组系统调用组成，每一个系统调用都是一个能完成特定功能的子程序，每当应用程序要求OS提供某种服务(功能)时，便调用具有相应功能的<code>系统调用</code></li>
+</ol>
+<h4 id="146-现代操作系统的新功能"><a class="markdownIt-Anchor" href="#146-现代操作系统的新功能"></a> 1.4.6 现代操作系统的新功能</h4>
+<ol>
+<li>
+<p>系统安全</p>
+<ul>
+<li>认证技术。这是一个用来确认被认证的对象是否名副其实的过程，以确定对象的真实性，防止入侵者进行假冒和篡改等。</li>
+<li>密码技术。即对系统中所需存储和传输的数据进行加密，攻击者即使截获到数据，也无法理解数据的内容。</li>
+<li>访问控制技术: 两种途径
+<ul>
+<li>通过对用户存取权限的设置，限定用户只能访问被允许访问的资源，这样也就限定了用户对系统资源的访问范围</li>
+<li>通过对文件属性的设置来保障指定文件的安全性，如设置文件属性为只读时，该文件就只能被读而不能被修改</li>
+</ul>
+</li>
+<li>反病毒技术。安装反病毒软件，定期查杀病毒。</li>
+</ul>
+</li>
+<li>
+<p>网络的功能和服务</p>
+<ul>
+<li>网络通信</li>
+<li>资源管理</li>
+<li>应用互操作</li>
+</ul>
+</li>
+<li>
+<p>支持多媒体</p>
+<ul>
+<li>网络通信</li>
+<li>资源管理</li>
+<li>应用互操作</li>
+</ul>
+</li>
+</ol>
+<h2 id="15-os结构设计"><a class="markdownIt-Anchor" href="#15-os结构设计"></a> 1.5 OS结构设计</h2>
+<h4 id="151-传统的操作系统结构"><a class="markdownIt-Anchor" href="#151-传统的操作系统结构"></a> 1.5.1 传统的操作系统结构</h4>
+<h4 id="152-客户服务器模式"><a class="markdownIt-Anchor" href="#152-客户服务器模式"></a> 1.5.2 客户/服务器模式</h4>
+<ol>
+<li>
+<p>客户/服务器模式(Client-Server Model)的组成</p>
+<ul>
+<li>客户机</li>
+<li>服务器</li>
+<li>网络系统</li>
+</ul>
+</li>
+<li>
+<p>客户/服务器之间的交互</p>
+<ul>
+<li>客户发送请求消息</li>
+<li>服务器接收消息</li>
+<li>服务器回送消息</li>
+<li>客户机接收消息</li>
+</ul>
+</li>
+<li>
+<p>客户/服务器模式的优点</p>
+<ul>
+<li>实现数据的分布处理和存储（用客户机进行本地处理和数据的分布存储）</li>
+<li>便于集中管理。重要数据和设备集中管理，提高了系统的可靠性和安全性</li>
+<li>提高了系统的灵活性和可扩充性</li>
+<li>易于改编应用软件（客户机程序）</li>
+</ul>
+</li>
+</ol>
+<h4 id="153-面向对象的程序设计技术object-orientated-programming"><a class="markdownIt-Anchor" href="#153-面向对象的程序设计技术object-orientated-programming"></a> 1.5.3 面向对象的程序设计技术(Object-Orientated Programming)</h4>
+<h4 id="154-微内核os结构"><a class="markdownIt-Anchor" href="#154-微内核os结构"></a> 1.5.4 微内核OS结构</h4>
+<ol>
+<li>
+<p>微内核操作系统的基本概念</p>
+<ul>
+<li>足够小的内核</li>
+<li>基于客户/服务器模式</li>
+<li>应用&quot;机制与策略分离&quot;原理</li>
+<li>采用面向对象技术</li>
+</ul>
+</li>
+<li>
+<p>微内核的基本功能</p>
+<ul>
+<li>进程（线程）管理。</li>
+<li>低级存储器管理。</li>
+<li>中断和陷入处理。</li>
+</ul>
+</li>
+<li>
+<p>微内核操作系统的优点</p>
+<ul>
+<li>提高了系统的可扩展性</li>
+<li>增强了系统的可靠性</li>
+<li>可移植性强</li>
+<li>提供了对分布式系统的支持</li>
+<li>融入了面向对象技术</li>
+</ul>
+</li>
+<li>
+<p>微内核操作系统存在的问题: 运行效率有所降低</p>
+</li>
+</ol>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Lucifer LGX</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Nightliuguoxing"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Nightliuguoxing" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2050180797lgx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">QQ 丨 2050180797</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/english/index/" title="英二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="英二"/></a><div class="content"><a class="title" href="/2021/03/27/english/index/" title="英二">英二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/maths/index/" title="数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数二"/></a><div class="content"><a class="title" href="/2021/03/27/maths/index/" title="数二">数二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-22"/></a><div class="content"><a class="title" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22">DATE 2021-03-22</a><time datetime="2021-03-21T16:00:00.000Z" title="发表于 2021-03-22 00:00:00">2021-03-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/maths/ZY/" title="张宇 - 数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="张宇 - 数二"/></a><div class="content"><a class="title" href="/2021/03/21/maths/ZY/" title="张宇 - 数二">张宇 - 数二</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-21"/></a><div class="content"><a class="title" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21">DATE 2021-03-21</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%93%E4%B8%9A/"><span class="card-category-list-name">专业</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%94%BF%E6%B2%BB/"><span class="card-category-list-name">政治</span><span class="card-category-list-count">120</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E4%BA%8C/"><span class="card-category-list-name">数二</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%8B%B1%E4%BA%8C/"><span class="card-category-list-name">英二</span><span class="card-category-list-count">4</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%8B%B1%E4%BA%8C/" style="font-size: 1.3em; color: rgb(187, 138, 183)">英二</a><a href="/tags/%E6%95%B0%E4%BA%8C/" style="font-size: 1.3em; color: rgb(0, 113, 31)">数二</a><a href="/tags/%E6%94%BF%E6%B2%BB/" style="font-size: 1.5em; color: rgb(166, 21, 196)">政治</a><a href="/tags/%E4%B8%93%E4%B8%9A/" style="font-size: 1.1em; color: rgb(62, 33, 160)">专业</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">27</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">32</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">129</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-12-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">62.9k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-03-28T12:09:37.966Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/top_default.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020-2021 - 2021 By Lucifer LGX</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>鲁ICP备19034408号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%8B%B1%E4%BA%8C/" style="font-size: 1.3em; color: rgb(165, 17, 167)">英二</a><a href="/tags/%E6%95%B0%E4%BA%8C/" style="font-size: 1.3em; color: rgb(128, 165, 104)">数二</a><a href="/tags/%E6%94%BF%E6%B2%BB/" style="font-size: 1.5em; color: rgb(105, 199, 32)">政治</a><a href="/tags/%E4%B8%93%E4%B8%9A/" style="font-size: 1.1em; color: rgb(11, 196, 3)">专业</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">27</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">32</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">129</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-12-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">62.9k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-04-23T12:05:01.811Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/top_default.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020-2021 - 2021 By Lucifer LGX</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>鲁ICP备19034408号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
@@ -341,48 +697,6 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><div class="js-
       })
       true && mermaid.init()
     })
-  }
-}</script><script>function loadValine () {
-  function initValine () {
-    let initData = {
-      el: '#vcomment',
-      appId: 'HiHYvf5onwRzqyXaABTznB3Q-gzGzoHsz',
-      appKey: '9b1pQs8nNJBAClfhJbLqRPYH',
-      placeholder: 'Please leave your footprints',
-      avatar: 'monsterid',
-      meta: 'nick,mail,link'.split(','),
-      pageSize: '10',
-      lang: 'zh-CN',
-      recordIP: false,
-      serverURLs: '',
-      emojiCDN: '',
-      emojiMaps: "",
-      enableQQ: false,
-      path: window.location.pathname,
-    }
-
-    if (true) { 
-      initData.requiredFields= ('nick,mail'.split(','))
-    }
-    
-    if (false) {
-      const otherData = false
-      initData = Object.assign(initData, otherData)
-    }
-    
-    const valine = new Valine(initData)
-  }
-
-  if (typeof Valine === 'function') initValine() 
-  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
-}
-
-if ('Valine' === 'Valine' || !false) {
-  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
-  else setTimeout(loadValine, 0)
-} else {
-  function loadOtherComment () {
-    loadValine()
   }
 }</script><script defer src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script>var gitcalendar = new Vue({
   el: '#gitcalendar',
