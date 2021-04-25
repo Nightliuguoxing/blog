@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://liuguoxing.top/img/cover.jpg">
 <meta property="article:published_time" content="2021-04-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-24T10:10:26.557Z">
+<meta property="article:modified_time" content="2021-04-25T01:37:42.702Z">
 <meta property="article:author" content="Lucifer LGX">
 <meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
@@ -64,7 +64,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-04-24 18:10:26'
+  postUpdate: '2021-04-25 09:37:42'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -553,14 +553,378 @@
 <li>条件变量</li>
 </ol>
 <h2 id="25-经典进程的同步问题"><a class="markdownIt-Anchor" href="#25-经典进程的同步问题"></a> 2.5 经典进程的同步问题</h2>
-</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Lucifer LGX</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Nightliuguoxing"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Nightliuguoxing" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2050180797lgx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">QQ 丨 2050180797</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/english/index/" title="英二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="英二"/></a><div class="content"><a class="title" href="/2021/03/27/english/index/" title="英二">英二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/maths/index/" title="数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数二"/></a><div class="content"><a class="title" href="/2021/03/27/maths/index/" title="数二">数二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-22"/></a><div class="content"><a class="title" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22">DATE 2021-03-22</a><time datetime="2021-03-21T16:00:00.000Z" title="发表于 2021-03-22 00:00:00">2021-03-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/maths/ZY/" title="张宇 - 数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="张宇 - 数二"/></a><div class="content"><a class="title" href="/2021/03/21/maths/ZY/" title="张宇 - 数二">张宇 - 数二</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-21"/></a><div class="content"><a class="title" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21">DATE 2021-03-21</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+<h4 id="251-生产者消费者问题"><a class="markdownIt-Anchor" href="#251-生产者消费者问题"></a> 2.5.1 生产者—消费者问题</h4>
+<ol>
+<li>
+<p>利用记录型信号量解决生产者—消费者问题</p>
+ <div class="note danger simple"><p>注意：</p>
+<ul>
+<li>在每个程序中用于实现互斥的wait(mutex)和signal(mutex)必须成对地出现；</li>
+<li>对资源信号量empty和full的wait和signal操作，同样需要成对地出现，但它们分别处于不同的程序中。例如，wait(empty)在计算进程中，而signal(empty)则在打印进程中，计算进程若因执行wait(empty)而阻塞，则以后将由打印进程将它唤醒；</li>
+<li>在每个程序中的多个wait操作顺序不能颠倒。应先执行对资源信号量的wait操作，然后再执行对互斥信号量的wait操作，否则可能引起进程死锁。</li>
+</ul>
+</div>
+</li>
+<li>
+<p>利用AND信号量解决生产者—消费者问题</p>
+</li>
+</ol>
+<h4 id="252-哲学家进餐问题"><a class="markdownIt-Anchor" href="#252-哲学家进餐问题"></a> 2.5.2 哲学家进餐问题</h4>
+<div class="note default simple"><p><code>问题描述</code>：<br />
+有五位哲学家共用一张圆桌，分别坐在周围的五张椅子上，在圆桌上有五只碗和五只筷子，他们的生活方式是交替地进行思考和进餐。平时，一个哲学家进行思考，饥饿时便试图取用其左右最靠近他的筷子，只有在他拿到两只筷子时才能进餐。进餐完毕，放下筷子继续思考。</p>
+</div>
+<ol>
+<li>利用记录型信号量解决哲学家进餐问题
+<ul>
+<li>记录型信号量</li>
+</ul>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">semaphore chopstick[5]&#x3D;&#123;1,1,1,1,1&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li>利用AND信号量机制解决哲学家进餐问题
+<ul>
+<li>AND信号量</li>
+</ul>
+ <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">semaphore chopstick[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125;;</span><br><span class="line">processi()&#123;</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    think;</span><br><span class="line">    Sswait(chopstick［(i+<span class="number">1</span>) % <span class="number">5</span>］, chopstick ［i］);</span><br><span class="line">    eat;</span><br><span class="line">    Ssignal(chopstick ［(i+<span class="number">1</span>) % <span class="number">5</span>］, chopstick ［i］);</span><br><span class="line">&#125;<span class="keyword">while</span>(TRUE); </span><br></pre></td></tr></table></figure>
+</li>
+<li>不会死锁的哲学家进餐问题的解决方案
+<ul>
+<li>至多允许四位哲学家同时去拿左边的筷子，最终能保证至少有一位哲学家能够就餐，并在用餐完毕时能释放出用过的两只筷子，从而使更多的哲学家能够就餐</li>
+<li>仅当哲学家的左右两只筷子均可用时，才允许他拿起筷子进餐。即利用AND型信号量解决哲学家进餐问题</li>
+<li>规定奇数号哲学家先拿左边的筷子，再拿右边的筷子；而偶数号哲学家则相反</li>
+</ul>
+</li>
+</ol>
+<h4 id="253-读者-写者问题"><a class="markdownIt-Anchor" href="#253-读者-写者问题"></a> 2.5.3 读者-写者问题</h4>
+<div class="note default simple"><p>问题描述：一个数据文件或记录，可被多个进程共享，我们把只要求读该文件的进程称为“Reader进程”，其它进程则称为“Writer进程”。允许多个进程同时读一个共享对象，因为读操作不会使数据文件混乱。但不允许一个Writer进程和其它Reader进程或Writer进程同时访问共享对象，因为这种访问将会引起混乱。所谓“读者-写者问题（Reader-Writer Problem）”是指保证一个Writer进程必须与其它进程互斥地访问共享对象的同步问题。读者-写者问题常被用来测试新同步原语</p>
+</div>
+<ol>
+<li>
+<p>利用记录型信号量解决读者-写者问题</p>
+<ul>
+<li>为实现Reader与Writer进程间在读或写时的互斥需设置一个互斥信号量wmutex</li>
+<li>设置一个整型变量Readcount表示正在读的进程数目。由于只要有一个Reader进程在读，便不允许Writer进程去写。因此，仅当Readcount=0, 表示尚无Reader进程在读时，Reader进程才需要执行Wait(wmutex)操作。若wait(wmutex)操作成功，Reader进程便可去读，相应地，做Readcount+1操作。同理，仅当Reader进程在执行了Readcount减1操作后其值为0时，才须执行signal(wmutex)操作，以便让Writer进程写</li>
+<li>因为Readcount是一个可被多个Reader进程访问的临界资源，因此，应该为它设置一个互斥信号量rmutex</li>
+</ul>
+</li>
+<li>
+<p>利用信号量集机制解决读者-写者问题</p>
+</li>
+</ol>
+<div class="note default simple"><p>例1: 桌上有一空盘，只允许放入一个水果。<br />
+爸爸专向盘中放苹果，妈妈专向盘中放桔子。<br />
+女儿专等着吃盘中的苹果，儿子专等着吃盘中的桔子。<br />
+试用P、V原语实现爸爸、妈妈、儿子和女儿间能同步的算法</p>
+</div>
+<div class="note default simple"><p>例2: 有一阅览室，共有100个座位，<br />
+读者进入时必须先在一张登记表上登记，该表为每一座位列一表目，包括座号和姓名。<br />
+读者离开时要注销掉登记内容。<br />
+试用某一种语言（或类语言）和P、V操作描述读者进程的同步机构</p>
+</div>
+<h4 id="254-利用管程机制解决进程同步问题"><a class="markdownIt-Anchor" href="#254-利用管程机制解决进程同步问题"></a> 2.5.4 利用管程机制解决进程同步问题</h4>
+<ol>
+<li>利用管程解决生产者-消费者问题</li>
+<li>利用管程解决哲学家就餐问题：</li>
+</ol>
+<h2 id="26-进程通信"><a class="markdownIt-Anchor" href="#26-进程通信"></a> 2.6 进程通信</h2>
+<div class="note info simple"><p>进程通信，是指进程之间的信息交换。进程之间的互斥和同步，由于其所交换的信息量少而被归结为低级通信。能传送大量数据的通信方式称为高级通信</p>
+</div>
+<h4 id="261-进程通信的类型"><a class="markdownIt-Anchor" href="#261-进程通信的类型"></a> 2.6.1 进程通信的类型</h4>
+<ol>
+<li>
+<p>共享存储器系统(Shared-Memory System)</p>
+<ul>
+<li>基于共享数据结构的通信方式: 如生产者-消费者问题中的缓冲池buffer</li>
+<li>基于共享存储区的通信方式</li>
+</ul>
+</li>
+<li>
+<p>管道(Pipe)通信系统</p>
+<ul>
+<li>所谓“管道”，是指用于连接一个读进程和一个写进程以实现他们之间通信的一个共享文件，又名pipe文件</li>
+<li>管道机制必须提供以下三方面的协调能力
+<ul>
+<li>互斥，即当一个进程正在对pipe执行读/写操作时，其它(另一)进程必须等待。</li>
+<li>同步，指当写(输入)进程把一定数量(如4 KB)的数据写入pipe，便去睡眠等待，直到读(输出)进程取走数据后，再把他唤醒。当读进程读一空pipe时，也应睡眠等待，直至写进程将数据写入管道后，才将之唤醒。</li>
+<li>确定对方是否存在，只有确定了对方已存在时，才能进行通信。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>消息传递系统(Message passing system)</p>
+<ul>
+<li>又因其实现方式的不同而进一步分成直接通信方式和间接通信方式两种</li>
+</ul>
+</li>
+<li>
+<p>客户机-服务器系统(Client-Server  system)</p>
+<ul>
+<li>套接字
+<ul>
+<li>基于文件型</li>
+<li>基于网络型</li>
+</ul>
+</li>
+<li>远程过程调用和远程方法调用</li>
+</ul>
+</li>
+</ol>
+<h4 id="262-消息传递通信的实现方式"><a class="markdownIt-Anchor" href="#262-消息传递通信的实现方式"></a> 2.6.2 消息传递通信的实现方式</h4>
+<ol>
+<li>
+<p>直接消息传递系统</p>
+<ul>
+<li>直接通信原语
+<ul>
+<li>对称寻址方式</li>
+<li>非对称寻址方式</li>
+</ul>
+</li>
+<li>消息的格式</li>
+<li>进程同步方式
+<ul>
+<li>发送进程阻塞、 接收进程阻塞（汇合）</li>
+<li>发送进程不阻塞、 接收进程阻塞</li>
+<li>发送进程和接收进程均不阻塞</li>
+</ul>
+</li>
+<li>通信链路(communication link)
+<ul>
+<li>连接方法
+<ul>
+<li>点—点</li>
+<li>多点连接链路</li>
+</ul>
+</li>
+<li>通信方式
+<ul>
+<li>单向通信链路</li>
+<li>双向链路</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>间接通信方式 （信箱通信）</p>
+<ul>
+<li>信箱的结构
+<ul>
+<li>信箱定义为一种数据结构。在逻辑上可以将其分为两个部分：</li>
+<li>信箱头：用以存放有关信箱的描述信息，如信箱标识符、信箱的拥有者、信箱口令、信箱的空格数等。</li>
+<li>信箱体：由若干个可以存放消息（或消息头）的信箱格组成，信箱格的数目以及每格的大小是在创建信箱时确定的。</li>
+</ul>
+</li>
+<li>信箱通信原语
+<ul>
+<li>信箱的创建和撤消</li>
+<li>消息的发送和接收</li>
+</ul>
+</li>
+<li>信箱的类型
+<ul>
+<li>私用信箱: 由用户进程创建</li>
+<li>公用信箱: 由操作系统创建</li>
+<li>共享信箱: 由某进程创建</li>
+</ul>
+</li>
+<li>发送进程和接受进程的关系
+<ul>
+<li>一对一关系</li>
+<li>多对一关系</li>
+<li>一对多关系</li>
+<li>多对多关系</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="263-消息缓冲队列通信机制"><a class="markdownIt-Anchor" href="#263-消息缓冲队列通信机制"></a> 2.6.3 消息缓冲队列通信机制</h4>
+<ol>
+<li>消息缓冲队列通信机制中的数据结构
+<ul>
+<li>消息缓冲区。在消息缓冲队列通信方式中，主要利用的数据结构是消息缓冲区</li>
+<li>PCB中有关通信的数据项。在利用消息缓冲队列通信机制时，在设置消息缓冲队列的同时，还应增加用于对消息队列进行操作和实现同步的信号量，并将它们置入进程的PCB中</li>
+</ul>
+</li>
+<li>发送原语</li>
+<li>接收原语</li>
+</ol>
+<h2 id="27-线程的基本概念"><a class="markdownIt-Anchor" href="#27-线程的基本概念"></a> 2.7  线程的基本概念</h2>
+<h4 id="271-线程threads的引入"><a class="markdownIt-Anchor" href="#271-线程threads的引入"></a> 2.7.1 线程（Threads）的引入</h4>
+<ol>
+<li>进程的两个基本属性
+<ul>
+<li>进程是一个可拥有资源的独立单位，也是一个可独立调度和分派的基本单位。</li>
+</ul>
+</li>
+<li>程序并发执行所需付出的时空开销
+<ul>
+<li>创建进程</li>
+<li>进程切换</li>
+<li>撤消进程</li>
+</ul>
+</li>
+<li>线程-作为调度和分派的基本单位</li>
+</ol>
+<h4 id="272-线程与进程的比较"><a class="markdownIt-Anchor" href="#272-线程与进程的比较"></a> 2.7.2 线程与进程的比较</h4>
+<ol>
+<li>调度的基本单位</li>
+<li>并发性</li>
+<li>拥有资源</li>
+<li>独立性</li>
+<li>系统开销：创建、撤销、切换</li>
+<li>支持多处理机系统</li>
+</ol>
+<h4 id="273-线程的状态和线程控制块"><a class="markdownIt-Anchor" href="#273-线程的状态和线程控制块"></a> 2.7.3 线程的状态和线程控制块</h4>
+<ol>
+<li>线程运行的三个状态
+<ul>
+<li>执行状态，表示线程正获得处理机而运行；</li>
+<li>就绪状态，指线程已具备了各种执行条件，一旦获得CPU便可执行的状态；</li>
+<li>阻塞状态，指线程在执行中因某事件而受阻，处于暂停执行时的状态。</li>
+</ul>
+</li>
+<li>线程控制块
+<ul>
+<li>线程标识符</li>
+<li>一组寄存器，它包括程序计数器PC和堆栈指针中的内容</li>
+<li>线程运行状态，用于描述线程正处于何种运行状态</li>
+<li>优先级，描述线程执行的优先程度</li>
+<li>线程专有存储器，用于保存线程自己的局部变量拷贝</li>
+<li>信号屏蔽，即对某些信号加以屏蔽</li>
+<li>堆栈指针，在堆栈中通常保存有局部变量和返回地址</li>
+</ul>
+</li>
+<li>多线程OS中的进程属性
+<ul>
+<li>进程是一个可拥有资源的基本单位</li>
+<li>多个线程可并发执行</li>
+<li>进程已不是可执行的实体</li>
+</ul>
+</li>
+</ol>
+<h2 id="28-线程的实现"><a class="markdownIt-Anchor" href="#28-线程的实现"></a> 2.8  线程的实现</h2>
+<h4 id="281-线程的实现方式"><a class="markdownIt-Anchor" href="#281-线程的实现方式"></a> 2.8.1 线程的实现方式</h4>
+<ol>
+<li>内核支持线程KST(Kernel Supported Threads)
+<ul>
+<li>优点
+<ul>
+<li>在多处理机系统中，一个进程中的多个线程可并行执行</li>
+<li>如果一个线程阻塞了，内核可以调度该进程中的另一个线程或其它进程中的一个线程执行</li>
+<li>内核支持线程切换较快，开销小</li>
+<li>内核支持线程本身也可以采用多线程技术</li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>其模式切换的开销较大</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>用户级线程
+<ul>
+<li>优点
+<ul>
+<li>线程切换不需要转换到内核空间</li>
+<li>调度算法可以是进程专用的</li>
+<li>用户级线程的实现与OS平台无关</li>
+</ul>
+</li>
+<li>缺点
+<ul>
+<li>系统调用的阻塞问题</li>
+<li>在单纯的用户级线程方式中，内核每次分配给一个进程一个CPU，因此进程中仅有一个线程能执行</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>组合方式
+<ul>
+<li>三种不同的模型
+<ul>
+<li>多对一模型</li>
+<li>一对一模型</li>
+<li>多对多模型</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="282-线程的实现"><a class="markdownIt-Anchor" href="#282-线程的实现"></a> 2.8.2 线程的实现</h4>
+<ol>
+<li>内核支持线程的实现</li>
+<li>用户级线程的实现（两种方式）
+<ul>
+<li>运行时系统(Runtime System)</li>
+<li>内核控制线程</li>
+</ul>
+</li>
+</ol>
+<h4 id="283-线程的创建和终止"><a class="markdownIt-Anchor" href="#283-线程的创建和终止"></a> 2.8.3 线程的创建和终止</h4>
+<ol>
+<li>线程的创建</li>
+<li>线程的终止
+<ul>
+<li>一种是在线程完成了自己的工作后自愿退出</li>
+<li>另一种是线程在运行中出现错误或由于某种原因而被其它线程强行终止</li>
+</ul>
+</li>
+</ol>
+<div class="note default simple"><p>某寺庙，有小和尚、老和尚若干。<br />
+有一水缸，由小和尚提水入缸供老和尚饮用。<br />
+水缸可容10桶水，水取自同一井中。水井径窄，每次只能容一个桶取水。<br />
+水桶总数为3个。<br />
+每次入、取缸水仅为1桶，且不可同时进行。<br />
+试给出有关取水、入水的算法描述.</p>
+</div>
+<div class="note default simple"><p>假设有一个成品仓库，总共能放8台成品，生产者进程生产产品放入仓库，消费者进程从仓库中取出成品消费。<br />
+为了防止积压，仓库满的时候就停止生产。<br />
+由于仓库搬运设备只有一套，故成品的存入和取出只能分别执行，<br />
+使用P、V操作来实现该方案</p>
+</div>
+<h2 id="强化"><a class="markdownIt-Anchor" href="#强化"></a> 强化</h2>
+<div class="note default simple"><p>试从物理概念上说明记录型信号量wait和signal的含义<br />
+- 每次的wait(s)操作，意味着进程请求分配该类资源的一个单位资源。相反，执行一次signal(s) 操作意味着进程释放相应资源的一个单位资源。<br />
+- 当s.value&gt;0时，表示某类可用资源的数量；<br />
+- 当s.value=0时，表示该类资源正好分配完，无进程等待；<br />
+- 当s.value&lt;0时，表示该类资源已分配完。若有进程请求该类资源，则被阻塞，其绝对值等于等待该类资源的进程数。</p>
+</div>
+<div class="note default simple"><p>例2: 设有n个进程共享一个程序段，对于如下两种情况：</p>
+<ul>
+<li>如果每次只允许一个进程进入该程序段；</li>
+<li>如果每次最多允许m个进程（m＜n）同时进入该程序段；</li>
+</ul>
+</div>
+<div class="note default simple"><p>例3: 有一单向行驶的公路桥，每次只允许一辆汽车通过。当汽车到达桥头时，若桥上无车，便可上桥；否则需等待，直到桥上的汽车下桥为止。若每一辆车为一个进程，请用P、V操作保证汽车按要求过桥。</p>
+</div>
+<div class="note default simple"><p>例4: 在公共汽车上，司机和售票员各行其职，司机负责开车和到站停车；售票员负责售票和开、关车门，当售票员关好车门后，驾驶员才能开车行驶。汽车在正常行驶的过程中售票员售票。试用P、V操作实现司机与售票员间的同步。</p>
+</div>
+<div class="note default simple"><p>例5: 某车站售票厅，任何时刻最多可容纳20名购票者进入，当售票厅中少于20名购票者时，则厅外的购票者可立即进入，否则需在外面等待。若把一个购票者看作一个进程，请回答下列问题：</p>
+<ol>
+<li>用P、V操作管理这些并发进程时，应怎样定义信号量，写出信号量的初值以及信号量各种取值的含义。</li>
+<li>若欲购票者最多为n个人，写出信号量可能的变化范围(最大值和最小值)。</li>
+</ol>
+</div>
+<div class="note default simple"><p>例6: 有两个并发进程put、get，这两个进程共用一个缓冲区S（其大小为每次存放一个数据），put将数据存放入S，get将数据从S中取出。在将缓冲区中的上一个数据取走之前不能放入新数据，缓冲区初始化时为空。<br />
+试用P,V操作实现这两个进程间的同步，并写出程序描述。</p>
+</div>
+<div class="note default simple"><p>例7: 桌上有一空盘，允许存放一只水果。爸爸可向盘中放苹果，也可向盘中放桔子，儿子专等吃盘中的桔子，女儿专等吃盘中的苹果。 规定:当盘空时一次只能放一只水果供吃者取用。<br />
+请用P、V原语实现爸爸、儿子、女儿三个并发进程的同步。</p>
+</div>
+<div class="note default simple"><p>例8: 三个进程P1、P2、P3互斥使用一个包含N(N&gt;0)个单元的缓冲区。P1每次用produce()生成一个正整数并用put()送入缓冲区某一空单元中；P2每次用getodd()从该缓冲区中取出一个奇数并用countodd()统计奇数个数；P3每次用geteven()从该缓冲区中取出一个偶数并用counteven()统计偶数个数。请用信号量机制实现这三个进程的同步与互斥活动，并说明所定义信号量的含义。要求用伪代码描述。</p>
+</div>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Lucifer LGX</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Nightliuguoxing"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Nightliuguoxing" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2050180797lgx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">QQ 丨 2050180797</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/english/index/" title="英二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="英二"/></a><div class="content"><a class="title" href="/2021/03/27/english/index/" title="英二">英二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/maths/index/" title="数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数二"/></a><div class="content"><a class="title" href="/2021/03/27/maths/index/" title="数二">数二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-22"/></a><div class="content"><a class="title" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22">DATE 2021-03-22</a><time datetime="2021-03-21T16:00:00.000Z" title="发表于 2021-03-22 00:00:00">2021-03-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/maths/LYL/" title="李永乐 - 数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="李永乐 - 数二"/></a><div class="content"><a class="title" href="/2021/03/21/maths/LYL/" title="李永乐 - 数二">李永乐 - 数二</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-21"/></a><div class="content"><a class="title" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21">DATE 2021-03-21</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%93%E4%B8%9A/"><span class="card-category-list-name">专业</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%94%BF%E6%B2%BB/"><span class="card-category-list-name">政治</span><span class="card-category-list-count">120</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E4%BA%8C/"><span class="card-category-list-name">数二</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%8B%B1%E4%BA%8C/"><span class="card-category-list-name">英二</span><span class="card-category-list-count">4</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%8B%B1%E4%BA%8C/" style="font-size: 1.3em; color: rgb(84, 110, 73)">英二</a><a href="/tags/%E6%95%B0%E4%BA%8C/" style="font-size: 1.3em; color: rgb(94, 121, 87)">数二</a><a href="/tags/%E6%94%BF%E6%B2%BB/" style="font-size: 1.5em; color: rgb(50, 4, 53)">政治</a><a href="/tags/%E4%B8%93%E4%B8%9A/" style="font-size: 1.1em; color: rgb(63, 139, 56)">专业</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">27</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">32</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">129</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-12-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">62.9k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-04-24T10:17:51.256Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/top_default.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020-2021 - 2021 By Lucifer LGX</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>鲁ICP备19034408号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%8B%B1%E4%BA%8C/" style="font-size: 1.3em; color: rgb(131, 1, 73)">英二</a><a href="/tags/%E6%94%BF%E6%B2%BB/" style="font-size: 1.5em; color: rgb(17, 54, 165)">政治</a><a href="/tags/%E6%95%B0%E4%BA%8C/" style="font-size: 1.3em; color: rgb(120, 88, 63)">数二</a><a href="/tags/%E4%B8%93%E4%B8%9A/" style="font-size: 1.1em; color: rgb(88, 144, 38)">专业</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">27</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">32</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">129</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-12-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">62.9k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-04-25T01:38:47.285Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/top_default.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020-2021 - 2021 By Lucifer LGX</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>鲁ICP备19034408号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
