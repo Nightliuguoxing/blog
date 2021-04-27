@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://liuguoxing.top/img/cover.jpg">
 <meta property="article:published_time" content="2021-04-01T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-04-27T03:13:38.282Z">
+<meta property="article:modified_time" content="2021-04-27T09:23:18.817Z">
 <meta property="article:author" content="Lucifer LGX">
 <meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
@@ -64,7 +64,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2021-04-27 11:13:38'
+  postUpdate: '2021-04-27 17:23:18'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -253,12 +253,12 @@
 <ul>
 <li>说明：采用该算法时，系统按照作业到达的先后次序来进行调度。该算法既可以用于作业调度，也可以用于进程调度。一般与其它算法结合使用。</li>
 <li>优缺点：对长作业有利，对短作业不利。</li>
-<li><img src="" alt="" /></li>
+<li><img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619513214051-OS3231.jpg" alt="FCFS" /></li>
 </ul>
 </li>
 <li>短作业优先调度算法 SJF
 <ul>
-<li><img src="" alt="" /></li>
+<li><img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619513217519-OS3232.jpg" alt="FCFS vs SJF" /></li>
 <li>必须预知作业的运行时间,不一定能真正做到短作业优先调度</li>
 <li>该算法对长作业不利</li>
 <li>在采用SJF算法时，人机无法实现交互</li>
@@ -351,9 +351,13 @@
 </li>
 </ol>
 <h4 id="334-多队列调度算法"><a class="markdownIt-Anchor" href="#334-多队列调度算法"></a> 3.3.4 多队列调度算法</h4>
-<h4 id="345-多级反馈队列调度算法"><a class="markdownIt-Anchor" href="#345-多级反馈队列调度算法"></a> 3.4.5 多级反馈队列调度算法</h4>
+<h4 id="335-多级反馈队列调度算法"><a class="markdownIt-Anchor" href="#335-多级反馈队列调度算法"></a> 3.3.5 多级反馈队列调度算法</h4>
 <ol>
-<li>调度机制</li>
+<li>调度机制
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619513496361-OS3352.jpg" alt="多级反馈队列调度算法" /></li>
+</ul>
+</li>
 <li>多级反馈队列调度算法的性能
 <ul>
 <li>终端型作业用户。</li>
@@ -362,7 +366,7 @@
 </ul>
 </li>
 </ol>
-<h4 id="346-基于公平原则的调度算法"><a class="markdownIt-Anchor" href="#346-基于公平原则的调度算法"></a> 3.4.6  基于公平原则的调度算法</h4>
+<h4 id="336-基于公平原则的调度算法"><a class="markdownIt-Anchor" href="#336-基于公平原则的调度算法"></a> 3.3.6  基于公平原则的调度算法</h4>
 <ol>
 <li>保证调度算法</li>
 <li>公平分享调度算法</li>
@@ -450,10 +454,14 @@
 </ul>
 </li>
 </ol>
-<p><img src="" alt="实时进程调度" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619513426393-OS3422.jpg" alt="实时进程调度" /></p>
 <h4 id="343-最早截止时间优先即edfearliest-deadline-first算法"><a class="markdownIt-Anchor" href="#343-最早截止时间优先即edfearliest-deadline-first算法"></a> 3.4.3 最早截止时间优先即EDF(Earliest Deadline First)算法</h4>
 <ol>
-<li>非抢占式调度方式用于非周期性实时任务</li>
+<li>非抢占式调度方式用于非周期性实时任务
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619513649377-OS3431.jpg" alt="EDF算法用于非抢占调度方式" /></li>
+</ul>
+</li>
 <li>抢占式调度方式用于周期性实时任务</li>
 </ol>
 <div class="note default simple"><p>例1: 在一个实时系统中，有两个周期性实时任务A和B，<br />
@@ -461,6 +469,7 @@
 任务B只要求每50ms执行一次，执行时间为 25 ms。</p>
 </div>
 <h4 id="344-最低松弛度优先llfleast-laxity-first算法"><a class="markdownIt-Anchor" href="#344-最低松弛度优先llfleast-laxity-first算法"></a> 3.4.4 最低松弛度优先LLF(Least Laxity First)算法</h4>
+<p><img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619513738495-OS3440.jpg" alt="利用LLF算法进行调度的情况" /></p>
 <h4 id="345-优先级倒置priority-inversion-problem"><a class="markdownIt-Anchor" href="#345-优先级倒置priority-inversion-problem"></a> 3.4.5 优先级倒置(priority inversion problem)</h4>
 <ol>
 <li>优先级倒置的形成</li>
@@ -507,7 +516,11 @@
 <h4 id="352-计算机系统中的死锁"><a class="markdownIt-Anchor" href="#352-计算机系统中的死锁"></a> 3.5.2 计算机系统中的死锁</h4>
 <ol>
 <li>竞争不可抢占性资源引起死锁</li>
-<li>竞争可消耗性资源引起死锁</li>
+<li>竞争可消耗性资源引起死锁
+<ul>
+<li><img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619513822963-OS3522.jpg" alt="进程之间通信时的死锁" /></li>
+</ul>
+</li>
 <li>进程推进顺序不当引起死锁
 <ul>
 <li>进程推进顺序合法</li>
@@ -676,7 +689,7 @@ go to step 2;</li>
 </ol>
 </li>
 <li>银行家算法之例 <div class="note default simple"><p>假定系统中有五个进程｛P0, P1, P2, P3, P4｝和三类资源｛A, B, C｝，各种资源的数量分别为10、5、7，在T0时刻的资源分配情况如图 3-16所示。<br />
-<img src="" alt="" /></p>
+<img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619513889685-OS3724.jpg" alt="" /></p>
 </div>
 </li>
 </ol>
@@ -694,7 +707,7 @@ go to step 2;</li>
 <li>资源分配图(Resource Allocation Graph)</li>
 <li>死锁定理
 <ul>
-<li><img src="" alt="资源分配图的简化" /></li>
+<li><img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619513972118-OS3812.jpg" alt="资源分配图的简化" /></li>
 </ul>
 </li>
 <li>死锁检测中的数据结构
@@ -783,14 +796,309 @@ go to step 2;</li>
 <li>该状态是否安全？</li>
 <li>若进程B提出请求RequestB(0,1,0)，系统能否将资源分配给它？</li>
 </ul>
-</div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Lucifer LGX</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Nightliuguoxing"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Nightliuguoxing" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2050180797lgx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">QQ 丨 2050180797</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/english/index/" title="英二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="英二"/></a><div class="content"><a class="title" href="/2021/03/27/english/index/" title="英二">英二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/maths/index/" title="数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数二"/></a><div class="content"><a class="title" href="/2021/03/27/maths/index/" title="数二">数二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-22"/></a><div class="content"><a class="title" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22">DATE 2021-03-22</a><time datetime="2021-03-21T16:00:00.000Z" title="发表于 2021-03-22 00:00:00">2021-03-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/maths/ZY/" title="张宇 - 数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="张宇 - 数二"/></a><div class="content"><a class="title" href="/2021/03/21/maths/ZY/" title="张宇 - 数二">张宇 - 数二</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-21"/></a><div class="content"><a class="title" href="/2021/03/21/politics/v2021/v20210321/" title="DATE 2021-03-21">DATE 2021-03-21</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+</div>
+<h2 id="强化一"><a class="markdownIt-Anchor" href="#强化一"></a> 强化一</h2>
+<div class="note default simple"><p>例1: 先来先服务调度算法<br />
+<img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619514090284-OS3EG1.jpg" alt="先来先服务调度算法" /></p>
+<ul>
+<li>说明：采用该算法时，系统按照作业到达的先后次序来进行调度。该算法既可以用于作业调度，也可以用于进程调度。一般与其它算法结合使用。</li>
+<li>优缺点：对长作业有利，对短作业不利。</li>
+</ul>
+</div>
+<div class="note default simple"><p>例2: 短作业(进程)优先调度算法<br />
+<img src="https://cdn.jsdelivr.net/gh/Nightliuguoxing/Pic@main/image/os/1619514167848-OS3EG2.jpg" alt="短作业(进程)优先调度算法" /><br />
+周转时间=完成时间-到达时间<br />
+带权周转时间=周转时间/服务时间</p>
+</div>
+<div class="note default simple"><p>例3: 单道批处理系统中有4个进程，其有关情况如下表所示，采用响应比高者优先调度算法时，计算其平均周转时间和平均带权周转时间。（请写出计算过程）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">进程名</th>
+<th style="text-align:center">提交时间</th>
+<th style="text-align:center">运行时间</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">P1</td>
+<td style="text-align:center">8.0</td>
+<td style="text-align:center">2.0</td>
+</tr>
+<tr>
+<td style="text-align:center">P2</td>
+<td style="text-align:center">8.6</td>
+<td style="text-align:center">0.6</td>
+</tr>
+<tr>
+<td style="text-align:center">P3</td>
+<td style="text-align:center">8.8</td>
+<td style="text-align:center">0.2</td>
+</tr>
+<tr>
+<td style="text-align:center">P4</td>
+<td style="text-align:center">9.0</td>
+<td style="text-align:center">0.5</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note default simple"><p>例4: 有一个具有两道作业的批处理系统，作业调度采用短作业优先的调度算法，进程调度采用以优先数为基础的抢占式调度算法。在下表所示的作业序列，作业优先数即为进程优先数，优先数越小优先级越高。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">作业号</th>
+<th style="text-align:center">到达时间</th>
+<th style="text-align:center">估计运行时间（分钟）</th>
+<th style="text-align:center">优先数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">A</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">B</td>
+<td style="text-align:center">10:20</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">C</td>
+<td style="text-align:center">10:30</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td style="text-align:center">D</td>
+<td style="text-align:center">10:50</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">6</td>
+</tr>
+</tbody>
+</table>
+<p>要求：</p>
+<ul>
+<li>列出所有作业进入内存时间及结束时间</li>
+<li>计算平均周转时间(以分钟计算)</li>
+</ul>
+</div>
+<div class="note default simple"><p>例5: 在一个单道批处理系统中，一组作业的提交时刻和运行时间如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">作业名</th>
+<th style="text-align:center">提交时间/h</th>
+<th style="text-align:center">运行时间/h</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">J1</td>
+<td style="text-align:center">8.0</td>
+<td style="text-align:center">1.0</td>
+</tr>
+<tr>
+<td style="text-align:center">J2</td>
+<td style="text-align:center">8.5</td>
+<td style="text-align:center">0.5</td>
+</tr>
+<tr>
+<td style="text-align:center">J3</td>
+<td style="text-align:center">9.0</td>
+<td style="text-align:center">0.2</td>
+</tr>
+<tr>
+<td style="text-align:center">J4</td>
+<td style="text-align:center">9.1</td>
+<td style="text-align:center">0.1</td>
+</tr>
+</tbody>
+</table>
+<p>试计算下列三种作业调度算法的平均周转时间T和带权周转时间W。</p>
+<ul>
+<li>先来先服务</li>
+<li>短作业优先</li>
+<li>响应比高者优先</li>
+</ul>
+</div>
+<div class="note danger simple"><p>例6: 我们如果为一个作业只建立一个进程，则为了照顾短作业用户，应采用（A）；为照顾紧急作业用户应采用（B）；为能实现人机交互作用应采用（C）；为了兼顾短作业和长时间等待的作业应采用（D）； 为了使短作业、长作业及交互作业用户都比较满意应采用（E）；为了使作业的平均周转时间短应采用（F）算法。<br />
+A，B，C, D, E, F：<br />
+（1）FCFS调度算法；<br />
+（2）短作业优先；<br />
+（3）时间片轮转法；<br />
+（4）多级反馈队列调度算法；<br />
+（5）基于优先权的剥夺调度算法；<br />
+（6）高响应比优先<br />
+答：<br />
+A:（2）短作业优先；<br />
+B:（5）基于优先权的剥夺调度算法；<br />
+C:（3）时间片轮转法；<br />
+D:（6）高响应比优先；<br />
+E:（4）多级反馈队列调度算法；<br />
+F:（2）短作业优先</p>
+</div>
+<h2 id="强化二"><a class="markdownIt-Anchor" href="#强化二"></a> 强化二</h2>
+<div class="note default simple"><p>例1: 考虑n个进程共享的、具有m个同类资源的系统。证明：如果对于I=1,2,…,n有Need&gt;0而且所有的最大需求量之和小于m+n，那么该系统是死锁无关的。</p>
+</div>
+<div class="note default simple"><p>例2: 设系统中仅有一类独占资源，进程一次只能申请一个资源，系统中多个进程竞争该类资源。试判断下述哪些情况会发生死锁，为什么？</p>
+<ol>
+<li>资源数为4，进程数为3，每个进程最多需要2个资源。</li>
+<li>资源数为6，进程数为2，每个进程最多需要4个资源。</li>
+<li>资源数为8，进程数为3，每个进程最多需要3个资源。</li>
+<li>资源数为20，进程数为8，每个进程最多需要2个资源。</li>
+</ol>
+</div>
+<div class="note default simple"><p>例3: 某系统有R1、R2、R3共三种资源，在T0时刻，P1、P2、P3和P4这4个进程对资源的占有和需求情况见下表，此刻系统可用资源向量为（2，1，2）。</p>
+<ol>
+<li>将系统资源总数和此刻各进程对资源的需求数目用向量、矩阵表示出来。</li>
+<li>如果此时P1和P2均发出资源请求向量Request（1，0，1），为了保持系统安全性，应该如何分配资源给这两个进程？</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">进程名</th>
+<th style="text-align:center">最大资源需求量</th>
+<th style="text-align:center">已分配的资源数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">P1</td>
+<td style="text-align:center">3 2 2</td>
+<td style="text-align:center">1 0 0</td>
+</tr>
+<tr>
+<td style="text-align:center">P2</td>
+<td style="text-align:center">6 1 3</td>
+<td style="text-align:center">4 1 1</td>
+</tr>
+<tr>
+<td style="text-align:center">P3</td>
+<td style="text-align:center">3 1 4</td>
+<td style="text-align:center">2 1 1</td>
+</tr>
+<tr>
+<td style="text-align:center">P4</td>
+<td style="text-align:center">4 2 2</td>
+<td style="text-align:center">0 0 2</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note default simple"><p>例4: 在银行家算法中，系统的资源数量为（10，5，7）。经过一段时间的分配后，资源分配与占用情况见下表:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">资源进程</th>
+<th style="text-align:center">已分配资源<br />A  B  C</th>
+<th style="text-align:center">最大资源<br /> A  B  C</th>
+<th style="text-align:center">还需求资源<br />A  B  C</th>
+<th style="text-align:center">可用资源量<br />A  B  C</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">P0</td>
+<td style="text-align:center">0  1  0</td>
+<td style="text-align:center">7  5  3</td>
+<td style="text-align:center">7  4  3</td>
+<td style="text-align:center">2  3  0</td>
+</tr>
+<tr>
+<td style="text-align:center">P1</td>
+<td style="text-align:center">3  0  2</td>
+<td style="text-align:center">3  2  2</td>
+<td style="text-align:center">0  2  0</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">P2</td>
+<td style="text-align:center">3  0  2</td>
+<td style="text-align:center">9  0  2</td>
+<td style="text-align:center">6  0  0</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">P3</td>
+<td style="text-align:center">2  1  1</td>
+<td style="text-align:center">2  2  2</td>
+<td style="text-align:center">0  1  1</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">P4</td>
+<td style="text-align:center">0  0  2</td>
+<td style="text-align:center">4  3  3</td>
+<td style="text-align:center">4  3  1</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>请分析该状态是否是安全的？</li>
+<li>若进程P0提出请求Request（0，1，0）后，系统能否将资源分配给它？</li>
+</ol>
+</div>
+<div class="note default simple"><p>例5: 某系统中有5个进程和4类资源，在T0时刻的资源分配情况如下表：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">资源进程</th>
+<th style="text-align:center">已分配资源<br />R1 R2 R3 R4</th>
+<th style="text-align:center">还需求资源<br />R1 R2 R3 R4</th>
+<th style="text-align:center">可用资源量<br />R1 R2 R3 R4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">P0</td>
+<td style="text-align:center">0  0  3  2</td>
+<td style="text-align:center">0  0  1  2</td>
+<td style="text-align:center">1  6  2  2</td>
+</tr>
+<tr>
+<td style="text-align:center">P1</td>
+<td style="text-align:center">1  0  0  0</td>
+<td style="text-align:center">1  7  5  0</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">P2</td>
+<td style="text-align:center">1  3  5  4</td>
+<td style="text-align:center">2  3  5  6</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">P3</td>
+<td style="text-align:center">0  3  3  2</td>
+<td style="text-align:center">0  6  5  2</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">P4</td>
+<td style="text-align:center">0  0  1  4</td>
+<td style="text-align:center">0  6  5  6</td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>该时刻系统是否安全？请分析。</li>
+<li>如果进程P2提出请求（1, 2, 2, 2），系统能否将资源分配给它？</li>
+</ol>
+</div>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Lucifer LGX</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">129</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Nightliuguoxing"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Nightliuguoxing" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2050180797lgx@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">QQ 丨 2050180797</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/english/index/" title="英二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="英二"/></a><div class="content"><a class="title" href="/2021/03/27/english/index/" title="英二">英二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/27/maths/index/" title="数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数二"/></a><div class="content"><a class="title" href="/2021/03/27/maths/index/" title="数二">数二</a><time datetime="2021-03-26T16:00:00.000Z" title="发表于 2021-03-27 00:00:00">2021-03-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22"><img src="https://lgxs.liuguoxing.top/cover/politics.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="DATE 2021-03-22"/></a><div class="content"><a class="title" href="/2021/03/22/politics/v2021/v20210322/" title="DATE 2021-03-22">DATE 2021-03-22</a><time datetime="2021-03-21T16:00:00.000Z" title="发表于 2021-03-22 00:00:00">2021-03-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/maths/TJF/" title="汤家凤 - 数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="汤家凤 - 数二"/></a><div class="content"><a class="title" href="/2021/03/21/maths/TJF/" title="汤家凤 - 数二">汤家凤 - 数二</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/03/21/maths/ZY/" title="张宇 - 数二"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="张宇 - 数二"/></a><div class="content"><a class="title" href="/2021/03/21/maths/ZY/" title="张宇 - 数二">张宇 - 数二</a><time datetime="2021-03-20T16:00:00.000Z" title="发表于 2021-03-21 00:00:00">2021-03-21</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
             <i class="fas fa-folder-open"></i>
             <span>分类</span>
             
             </div>
             <ul class="card-category-list" id="aside-cat-list">
             <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B8%93%E4%B8%9A/"><span class="card-category-list-name">专业</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%94%BF%E6%B2%BB/"><span class="card-category-list-name">政治</span><span class="card-category-list-count">120</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%95%B0%E4%BA%8C/"><span class="card-category-list-name">数二</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%8B%B1%E4%BA%8C/"><span class="card-category-list-name">英二</span><span class="card-category-list-count">4</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%8B%B1%E4%BA%8C/" style="font-size: 1.3em; color: rgb(24, 131, 113)">英二</a><a href="/tags/%E6%95%B0%E4%BA%8C/" style="font-size: 1.3em; color: rgb(128, 196, 186)">数二</a><a href="/tags/%E6%94%BF%E6%B2%BB/" style="font-size: 1.5em; color: rgb(3, 131, 41)">政治</a><a href="/tags/%E4%B8%93%E4%B8%9A/" style="font-size: 1.1em; color: rgb(20, 34, 146)">专业</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">27</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">32</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">129</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-12-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">62.9k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-04-27T03:15:08.900Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/top_default.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020-2021 - 2021 By Lucifer LGX</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>鲁ICP备19034408号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E8%8B%B1%E4%BA%8C/" style="font-size: 1.3em; color: rgb(15, 154, 151)">英二</a><a href="/tags/%E6%94%BF%E6%B2%BB/" style="font-size: 1.5em; color: rgb(192, 117, 59)">政治</a><a href="/tags/%E6%95%B0%E4%BA%8C/" style="font-size: 1.3em; color: rgb(133, 161, 161)">数二</a><a href="/tags/%E4%B8%93%E4%B8%9A/" style="font-size: 1.1em; color: rgb(94, 18, 154)">专业</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/03/"><span class="card-archive-list-date">三月 2021</span><span class="card-archive-list-count">27</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/02/"><span class="card-archive-list-date">二月 2021</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2021/01/"><span class="card-archive-list-date">一月 2021</span><span class="card-archive-list-count">32</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/12/"><span class="card-archive-list-date">十二月 2020</span><span class="card-archive-list-count">31</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2020/11/"><span class="card-archive-list-date">十一月 2020</span><span class="card-archive-list-count">8</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">129</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-12-31T16:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">62.9k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2021-04-27T09:24:06.072Z"></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/top_default.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020-2021 - 2021 By Lucifer LGX</div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/"><img class="icp-icon" src="/img/icp.png"><span>鲁ICP备19034408号</span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
